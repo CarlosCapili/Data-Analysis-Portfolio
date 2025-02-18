@@ -11,7 +11,7 @@ To determine crime demographics, location, type, date occ vs. date reported, and
 
 ## Findings:
 - More than 50% of victims are aged 25+, specifically 28% are aged between 25-34, 30% aged between 35-49, and 18% aged between 50-64
-- ![image](https://github.com/user-attachments/assets/c4918b94-bb6a-4cee-8a3d-d49fd90cdacd)
+
 
 - 51% of victims are male while 49% are female
 - The age breakdown between male and female are similar, 27% of male victims and 30% of female victims are aged between 25-34, 31% of male victims and 29% of female victims are aged between 35-49, and 20% of male victims and 16% of female victims are aged between 50-64
