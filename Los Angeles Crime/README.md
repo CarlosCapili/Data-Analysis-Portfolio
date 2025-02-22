@@ -11,8 +11,7 @@ To report victim crime data in Los Angeles and gain a better understanding
 
 ## Findings:
 
-![image](https://github.com/user-attachments/assets/458434da-3734-43d5-9b02-07a53484e4ae)
-![image](https://github.com/user-attachments/assets/f3d05019-bafd-4e5f-8055-c7f4b8ca58c2)
+![image](https://github.com/user-attachments/assets/458434da-3734-43d5-9b02-07a53484e4ae) ![image](https://github.com/user-attachments/assets/f3d05019-bafd-4e5f-8055-c7f4b8ca58c2)
 - More than 50% of victims are aged 25 and over
 - 1 in 3 people aged 35-49 are victims of a a crime or 30.31%, followed by people aged 25-34 at 28.10%, and 50-64 at 18.47%
 - 1 in 10 people aged 20-24 are vicitms of a crime or 9.86%
