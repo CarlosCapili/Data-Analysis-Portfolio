@@ -18,6 +18,7 @@ To determine crime demographics, location, type, date occ vs. date reported, and
 - 1 in 10 people aged 20-24 are vicitms of a crime or 9.86%
 - 40% of victims are hispanic, 25% are white and 18% are black, followed by asians and others
 - 51% of victims are male
+- Males 35+ experience more crime than females, whereas females 34 and under experience more crime than males
 
 ![image](https://github.com/user-attachments/assets/80d6b656-555b-4002-a483-8d6900eae761)
 - The most common crimes in LA are assault, theft, burglary, and vandalism
@@ -33,7 +34,8 @@ To determine crime demographics, location, type, date occ vs. date reported, and
 - 38.38% of assault crimes are BATTERY - SIMPLE ASSAULT
 - 25.57% are ASSAULT WITH DEADLY WEAPON, AGGRAVATED ASSAULT
 - 24.15% are INTIMATE PARTNER - SIMPLE ASSAULT
-- Males are more likely to be victims of BATTERY and ASSAULT WITH DEADLY WEAPON, while females are mmore likely to be victims in INTIMATE PARTNER - SIMPLE AND AGGRAVATED ASSAULT crimes
+- Males are likely to be be victims in crimes involving ASSAULT WITH DEADLY WEAPON ON POLICE OFFICER or AGGRAVATED ASSAULT crimes at 93% and 72% respectively
+- Females are likely to be victims in INTIMATE PARTNER - SIMPLE AND AGGRAVATED ASSAULT crimes at 78% and 76% respectively 
 - 
 
 
