@@ -3,7 +3,7 @@
 https://catalog.data.gov/dataset/crime-data-from-2020-to-present
 
 ## Purpose
-To determine crime demographics, location, type, date occ vs. date reported, and more, for a better understanding of crimes in Los Angeles
+To report victim crime data in Los Angeles and gain a better understanding
 
 ## Tools
 - Jupyter Notebook
@@ -33,12 +33,15 @@ To determine crime demographics, location, type, date occ vs. date reported, and
 
 - Assault Demographics
 ![image](https://github.com/user-attachments/assets/eb9d7f11-65ee-44ce-a4e7-11eec9f5f6e0)
+![image](https://github.com/user-attachments/assets/42d535cd-b8f4-40f0-92bc-1b79c7c0384c)
 - 38.38% of assault crimes are BATTERY - SIMPLE ASSAULT, where victims are mostly black (22.20%) and hispanic (56.86%)
 - 25.57% are ASSAULT WITH DEADLY WEAPON, AGGRAVATED ASSAULT, where victims are mostly black (29.68%) and hispanic (55.52%)
 - 24.15% are INTIMATE PARTNER - SIMPLE ASSAULT, where victims are mostly black (26.45%) and hispanic (57.09%)
 - Males are likely to be be victims in crimes involving ASSAULT WITH DEADLY WEAPON ON POLICE OFFICER or AGGRAVATED ASSAULT crimes at 93% and 72% respectively
-- Females are likely to be victims in INTIMATE PARTNER - SIMPLE AND AGGRAVATED ASSAULT crimes at 78% and 76% respectively 
+- Males aged 35-49 have the highest rate of being victims in ASSAULT WITH DEADLY WEAPON, AGGRAVATED ASSUALT crimes, followed by males aged 25-34
+- Females are likely to be victims in INTIMATE PARTNER - SIMPLE AND AGGRAVATED ASSAULT crimes at 78% and 76% respectively
 
+![image](https://github.com/user-attachments/assets/5905dd07-f968-40a6-b407-6861d5ff681b)
 
 
 
