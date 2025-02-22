@@ -10,6 +10,9 @@ To determine crime demographics, location, type, date occ vs. date reported, and
 - Python (pandas, matplotlib, seaborn)
 
 ## Findings:
+Distribution of Victim Ages
+![image](https://github.com/user-attachments/assets/20c8756e-0c5a-46cf-a254-52083f15ba4e)
+
 - More than 50% of victims are aged 25+, specifically 28% are aged between 25-34, 30% aged between 35-49, and 18% aged between 50-64
 
 
