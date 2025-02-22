@@ -11,7 +11,9 @@ To determine crime demographics, location, type, date occ vs. date reported, and
 
 ## Findings:
 Distribution of Victim Ages
-![image](https://github.com/user-attachments/assets/ecd5b3dc-f1af-405d-98ea-28f76ac97125)
+![image](https://github.com/user-attachments/assets/ae0bb6f9-94b3-4f84-b019-52e030e3ed57)
+
+
 
 
 - More than 50% of victims are aged 25+, specifically 28% are aged between 25-34, 30% aged between 35-49, and 18% aged between 50-64
