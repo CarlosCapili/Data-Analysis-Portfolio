@@ -3,7 +3,7 @@
 https://catalog.data.gov/dataset/crime-data-from-2020-to-present
 
 ## Purpose
-To report victim crime data in Los Angeles and gain a better understanding
+To report crime data in Los Angeles and gain a better understanding
 
 ## Tools
 - Jupyter Notebook
@@ -30,8 +30,7 @@ To report victim crime data in Los Angeles and gain a better understanding
   - Intimate Partner - Simple Assault - 6.45%
 
 
-![image](https://github.com/user-attachments/assets/eb9d7f11-65ee-44ce-a4e7-11eec9f5f6e0)
-![image](https://github.com/user-attachments/assets/42d535cd-b8f4-40f0-92bc-1b79c7c0384c)
+![image](https://github.com/user-attachments/assets/eb9d7f11-65ee-44ce-a4e7-11eec9f5f6e0) ![image](https://github.com/user-attachments/assets/42d535cd-b8f4-40f0-92bc-1b79c7c0384c)
 - 38.38% of assault crimes are BATTERY - SIMPLE ASSAULT, where victims are mostly black (22.20%) and hispanic (56.86%)
 - 25.57% are ASSAULT WITH DEADLY WEAPON, AGGRAVATED ASSAULT, where victims are mostly black (29.68%) and hispanic (55.52%)
 - 24.15% are INTIMATE PARTNER - SIMPLE ASSAULT, where victims are mostly black (26.45%) and hispanic (57.09%)
@@ -44,11 +43,10 @@ To report victim crime data in Los Angeles and gain a better understanding
 - 45% of females 45 and under are victims of rape, with 1 in 2 females being of hispanic descent (52.84%), and 1 in 5 females being white (19.45%) and black (21.07%)
 
 ![image](https://github.com/user-attachments/assets/8341427c-9523-4869-b2e3-1a5dc27cdf2b)
-- The majority of crimes have not led to arrests with 76.8% of reported crimes having ongoing investigations, with only approximately 9% of investigations leading to arrests
-
-- 42% of reported crimes have weapons used, with the most common weapon being a persons hands, fist, feet, or any bodily force
+- The majority of crimes have not led to arrests with 76.71% of reported crimes having ongoing investigations, with only approximately 9% of investigations leading to arrests
 - 51% of crimes are reported on the day of occurrence, with 19% reported the next day, and 16% reported within 2-7 days
-- The top 3 locations for crime are:
-  - Single Family Dwelling (28%)
-  - Street (23%)
-  - Multi-Unit Dwelling (Apartment, Duplex, etc) (20%)
+- The top 3 premises for crime in LA are:
+  - Single Family Dwelling (22.25%)
+  - Street (18.53%)
+  - Multi-Unit Dwelling (Apartment, Duplex, etc) (15.65%)
+- Top 3 LA Areas that experience the most crime are: Central, 77th Street, and Pacific and Southwest (tied)
