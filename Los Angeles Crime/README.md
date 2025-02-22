@@ -31,7 +31,6 @@ To report victim crime data in Los Angeles and gain a better understanding
   - Intimate Partner - Simple Assault - 6.45%
 
 
-- Assault Demographics
 ![image](https://github.com/user-attachments/assets/eb9d7f11-65ee-44ce-a4e7-11eec9f5f6e0)
 ![image](https://github.com/user-attachments/assets/42d535cd-b8f4-40f0-92bc-1b79c7c0384c)
 - 38.38% of assault crimes are BATTERY - SIMPLE ASSAULT, where victims are mostly black (22.20%) and hispanic (56.86%)
@@ -40,12 +39,13 @@ To report victim crime data in Los Angeles and gain a better understanding
 - Males are likely to be be victims in crimes involving ASSAULT WITH DEADLY WEAPON ON POLICE OFFICER or AGGRAVATED ASSAULT crimes at 93% and 72% respectively
 - Males aged 35-49 have the highest rate of being victims in ASSAULT WITH DEADLY WEAPON, AGGRAVATED ASSUALT crimes, followed by males aged 25-34
 - Females are likely to be victims in INTIMATE PARTNER - SIMPLE AND AGGRAVATED ASSAULT crimes at 78% and 76% respectively
-
 ![image](https://github.com/user-attachments/assets/5905dd07-f968-40a6-b407-6861d5ff681b)
+- Females who are vicitms to intimate partner assaults are likely to be aged 25-34 (38.78%) or 35-49 (30.51%)
+![image](https://github.com/user-attachments/assets/0650ad85-a8e0-45b9-a2d9-7204ded76a85)
+- 45% of females 45 and under are victims of rape, with 1 in 2 females being of hispanic descent (52.84%), and 1 in 5 females being white (19.45%) and black (21.07%)
 
-
-
-- The majority of crimes have not led to arrests with 76.8% of reported crimes having ongoing investigations
+![image](https://github.com/user-attachments/assets/8341427c-9523-4869-b2e3-1a5dc27cdf2b)
+- The majority of crimes have not led to arrests with 76.8% of reported crimes having ongoing investigations, with only approximately 9% of investigations leading to arrests
 
 - 42% of reported crimes have weapons used, with the most common weapon being a persons hands, fist, feet, or any bodily force
 - 51% of crimes are reported on the day of occurrence, with 19% reported the next day, and 16% reported within 2-7 days
