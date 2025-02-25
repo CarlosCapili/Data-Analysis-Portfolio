@@ -10,15 +10,9 @@ To generate insights on EV adoption trends in Washington State.
 - Power BI
 
 ## Findings:
-- Top 3 counties with registered EV's are:
-1. King with 51.63% - 100,061 EV's
-2. Snohomish with 11.93% - 23,117 EV's
-3. Pierce with 7.87% - 15,257 EV's
-     
-- Top 3 cities with registered EV's are:
-1. Seattle with 16.41% - 31,797 EV's
-2. Bellevue with 5.00% - 9686 EV's
-3. Redmond with 3.58% - 6947 EV's
+- There are approximately 193,800 EV's registered in the state of Washington with approximately 85,000 EV's being Tesla's or 44% of the EV's in the state. Chevrolet and Nissan take 2nd and 3rd place at 7.51% and 7.40% respectively
+- King's county contains a little over half the EV's with approximately 100,000 being registered or 52% of the EV's in the state. Snohomish and Pierce contain 12% and 8% of registered EV's respectively
+- Seattle contains the most EV's with over 30,000 or 16.41% EV's in the state, followed by Bellevue and Redmond at 5% and 4% respectively 
      
 - Top 5 most registered EV make across cities:
 1. Tesla - 78.88% (381 cities) - approx. 79% of cities in Washington State have Tesla as the most registered EV
