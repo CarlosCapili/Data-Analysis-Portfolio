@@ -3,7 +3,7 @@
 https://catalog.data.gov/dataset/electric-vehicle-population-data
 
 ## Purpose
-To generate insights on EV adoption trends in Washington State.
+To report electric vehicle adoption in Washington State.
 
 ## Tools
 - SQL (Postgres)
@@ -19,8 +19,8 @@ To generate insights on EV adoption trends in Washington State.
      - Ford: 35 cities (7.25%)
      - Nissan: 24 cities (4.97%) 
      - Toyota: 20 cities (4.14%)
-- Top 10 registered EV models:
-1. Tesla Model Y (20.68% of all registered EV's)
+- The following list ranks the top 10 most registered EV's in the state: 
+1. Tesla Model Y (20.68% of all registered EV's in Washington State are Telsa Model Y)
 2. Tesla Model 3 (15.92%)
 3. Nissan Leaf (6.96%)
 4. Tesla Model S (4.03%)
@@ -30,25 +30,7 @@ To generate insights on EV adoption trends in Washington State.
 8. Volkswagen ID.4 (2.27%)
 9. Ford Mustang Mach-E (1.99%)
 10. Jeep Wrangler (1.98%)
-
-The remaining models make up 37.13% of all registered EV's
-
 - 78.37% of all registered EV's are Battery Electric Vehicle (BEV) while 21.63% are Plug-in Hybrid Electric Vehicle (PHEV)
-- The top 10 makes for BEVs are dominated by Tesla specifically Model Y and Model 3
-  
-- Top 10 makes for PHEV:
-1. 2023 Jeep Wrangler
-2. 2017 Chevrolet Volt
-3. 2024 Jeep Wrangler
-4. 2023 Chrysler Pacifica
-5. 2017 Toyota Prius Prime
-6. 2021 Toyota Rav4 Prime
-7. 2024 Toyota Rav4 Prime
-8. 2013 Chevrolet Volt
-9. 2018 Chevrolet Volt
-10. 2018 Toyota Prius Prime
-
-- The EV's with the best electric range are 2022/2023/2024 Lucid Air - 516 miles, 2024 Chevrolet Silverado EV - 440 miles, and 2022/2023/2024 Rivian R1T/R1S - 420/410 miles respectively
 
 ## Dashboard
 ![image](https://github.com/user-attachments/assets/b5ea94ff-a4de-45a5-b1d2-16f717f45c90)
