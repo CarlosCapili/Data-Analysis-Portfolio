@@ -1,3 +1,12 @@
+-- What is the percentages of car makes in Washington State?
+SELECT
+	make,
+	COUNT(*) AS ev_count,
+	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM ev_pop_final), 2) AS make_pct
+FROM ev_pop_final
+GROUP BY make
+ORDER BY make_pct DESC
+
 -- How many registered ev's are there in each county?
 SELECT
 	county,
@@ -34,7 +43,7 @@ FROM ev_pop_final
 GROUP BY city, make
 ORDER BY city, make_count DESC;
 
--- What car make is the most registered in each city?
+-- What car make is the most registered in each city and what is the percentage?
 WITH car_make_count AS (
 	SELECT
 		city,
@@ -46,39 +55,13 @@ WITH car_make_count AS (
 )
 
 SELECT
-	city,
-	make
+	make,
+	COUNT(*) AS city_count,
+	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(DISTINCT city) FROM car_make_count), 2) AS city_count_pct
 FROM car_make_count
 WHERE rn = 1
-
--- How many cities are the most used brands used in?
-WITH car_make_count AS (
-	SELECT
-		city,
-		make,
-		COUNT(*) AS make_count,
-		DENSE_RANK() OVER(PARTITION BY city ORDER BY COUNT(*) DESC) AS rn
-	FROM ev_pop_final
-	GROUP BY city, make
-)
-
-SELECT 
-	make,
-	COUNT(city) AS city_count,
-	ROUND(COUNT(city) * 100.0 / (SELECT COUNT(DISTINCT city) FROM ev_pop_final), 2) AS city_pct
-FROM car_make_count
-WHERE rn = 1
-GROUP BY make
-ORDER BY city_count DESC;
-
--- What is the most popular make of ev in Washington State?
-SELECT
-	make,
-	COUNT(*) AS make_count,
-	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM ev_pop_final), 2) AS make_pct
-FROM ev_pop_final
-GROUP BY make
-ORDER BY make_count DESC;
+GROUP BY make 
+ORDER BY city_count DESC
 
 -- What are the top 10 common ev models that are registered in Washington State?
 WITH ranked_ev_models AS (
@@ -94,8 +77,16 @@ WITH ranked_ev_models AS (
 
 SELECT
 	CASE WHEN dr <= 10 THEN model ELSE 'OTHER' END AS model,
-	CASE WHEN dr <= 10 THEN model_count ELSE (SELECT SUM(model_count) FROM ranked_ev_models WHERE dr > 10) END AS model_count,
-	CASE WHEN dr <= 10 THEN model_pct ELSE (SELECT SUM(model_pct) FROM ranked_ev_models WHERE dr > 10) END AS model_pct
+	CASE WHEN dr <= 10 THEN model_count ELSE (
+		SELECT SUM(model_count) 
+		FROM ranked_ev_models 
+		WHERE dr > 10
+	) END AS model_count,
+	CASE WHEN dr <= 10 THEN model_pct ELSE (
+		SELECT ROUND(SUM(model_count) * 100.0 /  (SELECT COUNT(*) FROM ev_pop_final), 2)
+		FROM ranked_ev_models 
+		WHERE dr > 10
+	) END AS model_pct
 FROM ranked_ev_models
 LIMIT 11
 
@@ -113,7 +104,8 @@ SELECT
 	model_year,
 	make,
 	model,
-	COUNT(*) AS car_count
+	COUNT(*) AS car_count,
+	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM ev_pop_final), 2)
 FROM ev_pop_final
 WHERE ev_type = 'Battery Electric Vehicle (BEV)'
 GROUP BY model_year, make, model
