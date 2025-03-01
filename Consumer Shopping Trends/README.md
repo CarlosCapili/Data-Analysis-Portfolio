@@ -12,7 +12,7 @@ To provide a demographic breakdown on consumer shopping trends and provide helpf
 ## Findings
 - Males spend an average of $59.54 USD while females spend an average of $60.25 USD
 - Males spend the most on average, on footwear at $60.65, while females spend the most on accessories at $60.76
-- The most common sizes among males in all categories is medium, folowed by large:
+- The most common sizes among males in all categories is medium, followed by large:
   - Accessories: Medium - 44.34%, Large - 24.65% (This means 44.34% of accessory purchases by males are medium and 24.65% are large)
   - Clothing: Medium - 43.18%, Large - 27.77%
   - Footwear: Medium - 44.25%, Large - 29.25%
@@ -26,7 +26,6 @@ To provide a demographic breakdown on consumer shopping trends and provide helpf
   - (1) Pants, (2) Jewelry, (3) Coat, Dress, Sweater
 - The top 3 items purchased by females are:
   - (1) Blouse, (2) Sandals, Shirt, (3) Socks, Handbag
-  
 - The average spending between consumer age groups are close in value with only a couple dollar differences. The following table shows the average spending per age group:
 | Age Group | Average Purchase Amount ($ USD) |
 |-|-|
@@ -36,7 +35,7 @@ To provide a demographic breakdown on consumer shopping trends and provide helpf
 | 45-54 | 60.33 |
 | 55-64 | 58.72 |
 | 65+ | 59.70 |
-
+- All age groups spend more than 50% of their purchases on clothing and accessories combined, while footwear and outerwear are the least purchased
 
 - Clothing and accessories are the leading categories consumers choose to spend their money with a total spending of $104,264 and $74,200 respectively. It can be seen that the average spending for a consumer for each category is around $60. However, consumers choose to spend more money on buying clothing and accesories.
 
