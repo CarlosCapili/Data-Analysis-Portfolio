@@ -13,8 +13,7 @@ To provide a demographic breakdown on consumer shopping trends and provide helpf
 - Males spend an average of $59.54 USD while females spend an average of $60.25 USD
 - The average spending between consumer age groups are close in value and barely have any differences. The average range of spending is between $58 - $60 for all age groups.
 - The following table shows the average spending per age group:
-- 
-| Age Group | Average Spending ($ USD) |
+| Age Group | Average Purchase Amount ($ USD) |
 |-|-|
 | 18-24 | 60.20 |
 | 25-34 | 60.13 |
