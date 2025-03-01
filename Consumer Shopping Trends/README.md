@@ -11,9 +11,23 @@ To provide a demographic breakdown on consumer shopping trends and provide helpf
 
 ## Findings
 - Males spend an average of $59.54 USD while females spend an average of $60.25 USD
-- The average spending between consumer age groups are close in value and barely have any differences. The average range of spending is between $58 - $60 for all age groups.
-- The following table shows the average spending per age group:
-
+- Males spend the most on average, on footwear at $60.65, while females spend the most on accessories at $60.76
+- The most common sizes among males in all categories is medium, folowed by large:
+  - Accessories: Medium - 44.34%, Large - 24.65% (This means 44.34% of accessory purchases by males are medium and 24.65% are large)
+  - Clothing: Medium - 43.18%, Large - 27.77%
+  - Footwear: Medium - 44.25%, Large - 29.25%
+  - Outerwear: Medium - 45.74%, Large - 27.80%
+- The most comon sizes among females in all categories is medium, followed by large:
+  - Accessories: Medium - 47.45%, Large - 25%
+  - Clothing: Medium - 48.20%, Large - 27.52%
+  - Footwear: Medium - 45.23%, Large - 27.64%
+  - Outerwear: Medium - 45.54%, Large - 30.69%
+- The top 3 items purchased by males are:
+  - (1) Pants, (2) Jewelry, (3) Coat, Dress, Sweater
+- The top 3 items purchased by females are:
+  - (1) Blouse, (2) Sandals, Shirt, (3) Socks, Handbag
+  
+- The average spending between consumer age groups are close in value with only a couple dollar differences. The following table shows the average spending per age group:
 | Age Group | Average Purchase Amount ($ USD) |
 |-|-|
 | 18-24 | 60.20 |
@@ -23,7 +37,6 @@ To provide a demographic breakdown on consumer shopping trends and provide helpf
 | 55-64 | 58.72 |
 | 65+ | 59.70 |
 
-### Spending by Categories
 
 - Clothing and accessories are the leading categories consumers choose to spend their money with a total spending of $104,264 and $74,200 respectively. It can be seen that the average spending for a consumer for each category is around $60. However, consumers choose to spend more money on buying clothing and accesories.
 
