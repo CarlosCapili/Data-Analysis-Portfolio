@@ -3,41 +3,16 @@
 https://www.kaggle.com/datasets/bhadramohit/customer-shopping-latest-trends-dataset
 
 ## Purpose
-To identify trends in consumer retail purchasing
+To provide a demographic breakdown on consumer shopping trends and provide helpful insights into consumer shopping behaviours.
 
 ## Tools
 - SQL
-- pgAdmin4
 - Power BI
 
 ## Findings
-
-### General Stats
-- The majority of the dataset contains consumers between the ages of 25-64
-
-| Age Group | Count |
-|-|-|
-| 18-24 | 486 |
-| 25-34 | 755 |
-| 34-44 | 729 |
-| 45-54 | 752 |
-| 55-64 | 751 |
-| 65+ | 427 |
-
-- There are more male consumers than female consumers
-
-| Gender | Count |
-|-|-|
-| Female | 1248 |
-| Male | 2652 |
-
-- All 50 states are represented in the dataset, Montana having the most consumer entries at 96, while Rhode Island has the least at 63
-
-### Spending by Demographic
-
 - Males spend an average of $59.54 USD while females spend an average of $60.25 USD
 - The average spending between consumer age groups are close in value and barely have any differences. The average range of spending is between $58 - $60 for all age groups.
-
+- The following table shows the average spending per age group:
 | Age Group | Average Spending ($ USD) |
 |-|-|
 | 18-24 | 60.20 |
