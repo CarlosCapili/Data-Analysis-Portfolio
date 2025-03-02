@@ -33,7 +33,7 @@ To provide a demographic breakdown on consumer shopping trends and provide helpf
   - 45-54: $60.33 
   - 55-64: $58.72 
   - 65+: $59.70 
-- All age groups spend more than 50% of their purchases on clothing and accessories combined, while footwear and outerwear are the least purchased
+- All age groups spend 50%+ of their purchases on clothing and accessories combined, while footwear and outerwear are the least purchased
 - The most popular item purchased for each age groups are as follows:
   - 18-24: Sweater - $57.21 (Average purchase amount for a sweater is $57.21)
   - 25-34: Shirt - $65.38
@@ -56,22 +56,8 @@ To provide a demographic breakdown on consumer shopping trends and provide helpf
   - 45-54 Hat: $76.40
   - 55-64 Gloves: $79.67
   - 65+ Boots $99.00
-
-- There is no significant difference between spending during seasons. The total and average spendings for each season are very similar with the Fall season having the highest total and average purchase amount at $60,018 and $61.56 respectively. 
-
-| Season | Total Purchase Amount ($ USD) | Average Purchase Amount ($ USD) |
-|-|-|-|
-| Fall | 60,018 | 61.56 | 
-| Winter | 58,607 | 60.36 |
-| Spring | 58,679 | 58.74 |
-| Summer | 55,777 | 58.41 |
-
 - The most commonly purchased item in the Fall is a jacket, in winter it is sunglasses, in Spring it is a sweater, and in Summer it is pants.
-
-### Discounts and Promo Code Usage
-- Discounts have no impact on the average amount spent by season. Usually, consumers will spend more on average when there a discount is used. However, the data shows this is not the case.
 - 57% of consumers DO NOT use promo codes.
-- Clothing is the category that uses the most promo codes during purchase while Outerwear is the least.
 
 ## Dashboard
 ![image](https://github.com/user-attachments/assets/281409f7-5ab5-4b67-9d16-be34b7811a65)
