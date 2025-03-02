@@ -1,54 +1,66 @@
--- General Statistics 
-
--- What are the total number of purchases?
-SELECT 
-	COUNT(*) AS total_purchases
-FROM consumer_clean
-
--- What is the average purchase amount?
-SELECT 
-	ROUND(AVG(purchase_amt_usd), 2) AS avg_purchase_amt
-FROM consumer_clean
-
--- What are the min and max purchase amounts?
-SELECT
-	MIN(purchase_amt_usd) AS min_purchase,
-	MAX(purchase_amt_usd) AS max_purchase
-FROM consumer_clean
-
--- Customer Demographics
-
--- What is the age distribution of customers?
-SELECT 
-	age_group, 
-	COUNT(*) AS age_group_count
-FROM consumer_clean
-GROUP BY age_group
-ORDER BY age_group
-
---  What is the gender breakdown of customers?
-SELECT 
-	gender,
-	COUNT(*) AS gender_count
-FROM consumer_clean
-GROUP BY gender
-
--- Which location has the highest number of purchases?
-SELECT
-	location,
-	COUNT(*) AS location_purchases
-FROM consumer_clean
-GROUP BY location
-ORDER BY location_purchases DESC
-
--- Customer Segmentation 
-
 -- Average purchase amount by gender
 SELECT
 	gender,
 	ROUND(AVG(purchase_amt_usd), 2) AS avg_purchase_amt
 FROM consumer_clean
 GROUP BY gender
+
+-- Average purchase amount per category by gender?
+SELECT
+	gender,
+	category,
+	ROUND(AVG(purchase_amt_usd), 2) AS avg_purchase_amt
+FROM consumer_clean
+GROUP BY gender, category
+ORDER BY gender, avg_purchase_amt DESC
+
+-- What is the most common size for each category by gender?
+WITH size_counts AS (
+	SELECT
+		gender,
+		category,
+		size,
+		COUNT(*) AS size_count
+	FROM consumer_clean
+	GROUP BY gender, category, size
+),
+total_counts AS (
+	SELECT
+		gender,
+		category,
+		COUNT(*) AS total_count
+	FROM consumer_clean
+	GROUP BY gender, category
+)
+
+SELECT
+	sc.gender,
+	sc.category,
+	sc.size,
+	sc.size_count,
+	ROUND(sc.size_count * 100.0 / tc.total_count, 2) AS category_size_pct
+FROM size_counts AS sc
+JOIN total_counts AS tc
+	ON sc.gender = tc.gender AND sc.category = tc.category
+ORDER BY gender, category, category_size_pct DESC
+
+-- What are the top 3 most popular items purchased by gender?
+SELECT
+	gender,
+	item_purchased,
+	item_purchase_count,
+	dr
+FROM (
+	SELECT
+		gender,
+		item_purchased,
+		COUNT(*) AS item_purchase_count,
+		DENSE_RANK() OVER(PARTITION BY gender ORDER BY COUNT(*) DESC) AS dr
+	FROM consumer_clean
+	GROUP BY gender, item_purchased
+	ORDER BY gender, item_purchase_count DESC
+)
+WHERE dr <= 3
 
 -- Average spending per age group 
 SELECT
@@ -58,25 +70,51 @@ FROM consumer_clean
 GROUP BY age_group
 ORDER BY age_group
 
--- What is the average purchase amount by age group and gender
-SELECT 
-	age_group,
-	gender,
-	ROUND(AVG(purchase_amt_usd), 2) AS avg_purchase_amt
-FROM consumer_clean
-GROUP BY age_group, gender
-ORDER BY age_group, gender
-
 -- Which age group spends the most on average in each category
 SELECT
-	category,
 	age_group,
+	category,
 	ROUND(AVG(purchase_amt_usd), 2) AS avg_purchase_amt
 FROM consumer_clean
-GROUP BY category, age_group
-ORDER BY category, avg_purchase_amt DESC
+GROUP BY age_group, category
+ORDER BY age_group, avg_purchase_amt DESC
 
--- Purchase Behaviour
+-- What is the percentage breakdown of category purchases by age group?
+WITH total_count AS (
+	SELECT
+		age_group,
+		COUNT(*) AS age_group_count
+	FROM consumer_clean
+	GROUP BY age_group
+),
+sub_count AS (
+	SELECT
+		age_group,
+		category,
+		COUNT(*) AS category_count
+	FROM consumer_clean
+	GROUP BY age_group, category
+)
+
+SELECT 
+	sc.age_group,
+	sc.category,
+	sc.category_count,
+	ROUND(sc.category_count * 100.0 / tc.age_group_count, 2) AS age_group_cat_pct
+FROM sub_count AS sc
+JOIN total_count AS tc
+	ON sc.age_group = tc.age_group
+ORDER BY sc.age_group, age_group_cat_pct DESC
+
+-- What is the most popular item to buy per age group?
+SELECT
+	age_group,
+	item_purchased,
+	COUNT(*) AS item_count,
+	ROUND(AVG(purchase_amt_usd), 2) AS avg_purchase_amt
+FROM consumer_clean
+GROUP BY age_group, item_purchased
+ORDER BY age_group, item_count DESC
 
 -- Which categories or items are most popular?
 SELECT 
