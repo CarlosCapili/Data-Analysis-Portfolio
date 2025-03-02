@@ -36,6 +36,30 @@ To provide a demographic breakdown on consumer shopping trends and provide helpf
 | 55-64 | 58.72 |
 | 65+ | 59.70 |
 - All age groups spend more than 50% of their purchases on clothing and accessories combined, while footwear and outerwear are the least purchased
+- The most popular item purchased for each age groups are as follows:
+  - 18-24: Sweater - $57.21 (Average purchase amount for a sweater is $57.21)
+  - 25-34: Shirt - $65.38
+  - 35-44: Pants - $60.58
+  - 45-54: Shoes - $58.05
+  - 55-64: Coat - $51.78
+  - 65+: Jewelry - $59.09
+- The following list will display the item and category with highest average purchase amount for each gender in all age groups. This will give insights to what each gender of different ages prefer to spend their money on.
+- Males
+  - 18-24 Boots: $70.33
+  - 25-34 Shoes: $74.43 
+  - 35-44 Blouse: $78.27
+  - 45-54 Hat: $68.10
+  - 55-64 Jeans: $64.37
+  - 65+ T-shirt: $80.60
+- Females
+  - 18-24 T-shirt: $79.57
+  - 25-34 Jewelry: $72.00
+  - 35-44 Jewelry: $77.40
+  - 45-54 Hat: $76.40
+  - 55-64 Gloves: $79.67
+  - 65+ Boots $99.00
+
+
 
 - Clothing and accessories are the leading categories consumers choose to spend their money with a total spending of $104,264 and $74,200 respectively. It can be seen that the average spending for a consumer for each category is around $60. However, consumers choose to spend more money on buying clothing and accesories.
 
@@ -61,23 +85,7 @@ To provide a demographic breakdown on consumer shopping trends and provide helpf
 | Clothing | Sweater | 9,462 | 57.70 |
 | Clothing | Shorts | 9,433 | 60.08 |
 
-- The following list will display the item and category with highest average purchase amount for each gender in all age groups. This will give insights to what each gender of different ages prefer to spend their money on.
 
-Males
-- 18-24 Boots: $70.33
-- 25-34 Shoes: $74.43 
-- 35-44 Blouse: $78.27
-- 45-54 Hat: $68.10
-- 55-64 Jeans: $64.37
-- 65+ T-shirt: $80.60
-
-Females
-- 18-24 T-shirt: $79.57
-- 25-34 Jewelry: $72.00
-- 35-44 Jewelry: $77.40
-- 45-54 Hat: $76.40
-- 55-64 Gloves: $79.67
-- 65+ Boots $99.00
 
 ### Spending by Season
 
