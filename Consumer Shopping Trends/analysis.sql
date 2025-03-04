@@ -14,6 +14,14 @@ FROM consumer_clean
 GROUP BY gender, category
 ORDER BY gender, avg_purchase_amt DESC
 
+-- What is the percentage of purchases for each category?
+SELECT
+	category,
+	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM consumer_clean), 2) AS category_pct
+FROM consumer_clean
+GROUP BY category
+ORDER BY category_pct DESC
+
 -- What is the most common size for each category by gender?
 WITH size_counts AS (
 	SELECT
@@ -116,15 +124,6 @@ FROM consumer_clean
 GROUP BY age_group, item_purchased
 ORDER BY age_group, item_count DESC
 
--- Which categories or items are most popular?
-SELECT 
-	category,
-	ROUND(AVG(purchase_amt_usd), 2) AS avg_purchase_amt,
-	ROUND(SUM(purchase_amt_usd), 2) AS total_purchase_amt
-FROM consumer_clean
-GROUP BY category
-ORDER BY total_purchase_amt DESC
-
 -- What are the top 10 items consumers spend their money on?
 SELECT 
 	category,
@@ -135,72 +134,6 @@ FROM consumer_clean
 GROUP BY category, item_purchased
 ORDER BY total_purchase_amt DESC
 LIMIT 10
-
--- What are the age group and gender spending breakdown for Blouses, Dresses, and Jewelry?
-SELECT 
-	age_group,
-	gender,
-	item_purchased,
-	ROUND(SUM(purchase_amt_usd), 2) AS total_purchase_amt,
-	ROUND(AVG(purchase_amt_usd), 2) AS avg_purchase_amt
-FROM consumer_clean
-WHERE 
-	item_purchased IN ('Blouse', 'Dress', 'Jewelry')
-GROUP BY age_group, gender, item_purchased
-ORDER BY age_group, item_purchased, gender
-
--- What is the total spending for each item per category
-SELECT
-	category,
-	item_purchased,
-	ROUND(SUM(purchase_amt_usd), 2) AS total_purchase_amt
-FROM consumer_clean
-GROUP BY category, item_purchased
-ORDER BY category, total_purchase_amt DESC
-
--- What items are consumers spending there money on per age group? 
-WITH top_items AS (
-	SELECT
-		age_group,
-		gender,
-		category,
-		item_purchased,
-		ROUND(SUM(purchase_amt_usd), 2) AS total_purchase_amt,
-		ROUND(AVG(purchase_amt_usd), 2) AS avg_purchase_amt,
-		DENSE_RANK() OVER(PARTITION BY age_group, gender ORDER BY ROUND(AVG(purchase_amt_usd), 2) DESC) AS dr
-	FROM consumer_clean
-	GROUP BY age_group,gender, category, item_purchased
-)
-
-SELECT 
-	age_group,
-	gender,
-	category,
-	item_purchased,
-	avg_purchase_amt
-FROM top_items
-WHERE dr = 1
-ORDER BY gender, age_group
-
-What is the average purchase amount for each category for each gender?
-SELECT 
-	gender,
-	category,
-	ROUND(AVG(purchase_amt_usd), 2) AS avg_purchase_amt
-FROM consumer_clean
-GROUP BY gender, category
-ORDER BY gender
-
--- Seasonal Trends
-
--- What is the average and total purchase amount by season?
-SELECT 
-	season,
-	SUM(purchase_amt_usd) AS total_purchase_amt,
-	ROUND(AVG(purchase_amt_usd), 2) AS avg_purchase_amt
-FROM consumer_clean
-GROUP BY season
-ORDER BY total_purchase_amt DESC
 
 -- What items are commonly purchased in each season? (Top 5 ranked purchased items)
 WITH common_item_season AS
@@ -224,68 +157,36 @@ SELECT
 FROM common_item_season
 WHERE dr <= 5
 
-Which shipping type is most popular during each season?
+-- What is the percentage of shipping types used?
 SELECT
-	season,
 	shipping_type,
-	COUNT(*) AS shipping_type_count
+	COUNT(*) AS shipping_type_count,
+	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM consumer_clean), 2) AS shipping_type_pct
 FROM consumer_clean
-GROUP BY season, shipping_type
-ORDER BY season, shipping_type_count DESC
-
--- Discounts and Promo Code Usage
+GROUP BY shipping_type
+ORDER BY shipping_type_pct DESC
 
 -- How many purchases used a promo code?
-WITH code_used AS 
-(
-	SELECT
-		promo_code_used,
-		COUNT(*) AS num_purchases
-	FROM consumer_clean
-	GROUP BY promo_code_used
-)
-
 SELECT
 	promo_code_used,
-	num_purchases,
-	ROUND(num_purchases * 100.0 / (SELECT COUNT(*) FROM consumer_clean), 2) AS pct
-FROM code_used
-
--- What categories use the most promo codes during purchase?
-SELECT
-	category,
-	COUNT(*) AS promo_code_used_count
+	COUNT(*) AS promo_code_used_count,
+	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM consumer_clean), 2) AS promo_code_pct
 FROM consumer_clean
-WHERE promo_code_used = 'Yes'
-GROUP BY category
-ORDER BY promo_code_used_count DESC
+GROUP BY promo_code_used
 
--- What items in each cateogry use the most promo codes during purchase?
-SELECT
-	category,
-	item_purchased,
-	COUNT(*) AS promo_code_used_count
-FROM consumer_clean
-WHERE promo_code_used = 'Yes'
-GROUP BY category, item_purchased
-ORDER BY category, promo_code_used_count DESC
-
--- What is the average discount purchase by season?
-SELECT
-	season,
-	discount_applied,
-	ROUND(AVG(purchase_amt_usd), 2) AS avg_purchase_amt
-FROM consumer_clean
-GROUP BY season, discount_applied
-ORDER BY season, discount_applied
-
--- Payment and Preferences
-
--- What is the preferred payment method per age group?
+-- How many purchases applied a discount?
 SELECT 
-	age_group,
-	pref_payment_method,
-	COUNT(*) AS payment_method_count
+	discount_applied,
+	COUNT(*) AS disc_app_count,
+	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM consumer_clean), 2) AS disc_app_pct
 FROM consumer_clean
-GROUP BY age_group, pref_payment_method
-ORDER BY age_group, payment_method_count DESC
+GROUP BY discount_applied
+
+-- What is the preferred payment method?
+SELECT 
+	pref_payment_method,
+	COUNT(*) AS payment_method_count,
+	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM consumer_clean), 2) AS payment_method_pct
+FROM consumer_clean
+GROUP BY pref_payment_method
+ORDER BY payment_method_pct DESC
