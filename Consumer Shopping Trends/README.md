@@ -48,7 +48,8 @@ To provide a demographic breakdown on consumer shopping trends and provide helpf
 
 
 ## Dashboard
-![image](https://github.com/user-attachments/assets/281409f7-5ab5-4b67-9d16-be34b7811a65)
+![image](https://github.com/user-attachments/assets/7618e7eb-cc89-4130-8f57-bd9822595119)
+
 
 
  
