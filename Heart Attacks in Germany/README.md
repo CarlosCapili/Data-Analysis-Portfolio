@@ -10,6 +10,8 @@ To generate and report insights about heart attack occurences in Germany.
 - pgAdmin4
 
 ## Findings
+
+Heart Attack Rates
 - The heart attack rate in Germany is 14.88%
 - In general, adults experience a heart attack rate of 14.96% while youths experience a heart attack rate of 14.71%
 - The male heart attack rate is 15.01%, specifically adult males (25+) have a heart attack rate of 15.00% (+0.04) while youths (under 25 years) have a heart attack rate of 15.04% (+0.33)
@@ -18,7 +20,14 @@ To generate and report insights about heart attack occurences in Germany.
 - Rural areas experience a higher heart attack rate at 14.92% than urban areas with a heart attack rate of 14.85%
 - Individuals who have diabetes have a higher heart attack rate at 15.13% while those who don't have diabetes at 14.82%
 - Smokers, non-smokers, and former smoker experience heart attack rates similar to one another at 14.88%, 14.90%, and 14.87% respectively
-- Of the people who experienced heart attacks, 30.1% have heart attacks from family history, 39.5% from hypertension, and 20.2% have diabetes.
+
+Individuals Who Experienced Heart Attacks Breakdown
+- 50.27% are male and 49.73% are female
+- 70.40% are adults and 29.60% are youths
+- 50.11% occur in rural areas as opposed to urban areas
+- 30.18% have a family history of heart attacks
+- 39.44% have hypertension
+- 20.28% have diabetes
 
 ## Dashboard
 ![image](https://github.com/user-attachments/assets/221f2a58-3cbb-48e8-9eda-e57d474486e0)
