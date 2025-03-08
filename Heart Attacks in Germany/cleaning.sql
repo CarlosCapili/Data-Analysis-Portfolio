@@ -94,4 +94,7 @@ SELECT MIN(air_pollution_index), MAX(air_pollution_index) FROM ht_data
 -- region_heart_attack_rate
 SELECT MIN(region_heart_attack_rate), MAX(region_heart_attack_rate) FROM ht_data 
 
-SELECT * FROM ht_data
+-- Remove genders other than male and female
+DELETE FROM ht_data WHERE gender = 'Other'
+
+-- SELECT * FROM ht_data
