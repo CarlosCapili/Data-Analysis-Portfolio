@@ -30,7 +30,8 @@ Individuals Who Experienced Heart Attacks Breakdown
 - 20.28% have diabetes
 
 ## Dashboard
-![image](https://github.com/user-attachments/assets/221f2a58-3cbb-48e8-9eda-e57d474486e0)
+![image](https://github.com/user-attachments/assets/f033a15e-9beb-458d-b58f-e7ef1a499773)
+
 
 
  
