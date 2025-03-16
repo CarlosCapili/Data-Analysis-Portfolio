@@ -65,6 +65,9 @@ FROM staging_table;
 -- Add primary key
 ALTER TABLE staging_table ADD COLUMN id SERIAL PRIMARY KEY;
 
+-- Change table name
+ALTER TABLE staging_table RENAME TO inpatient_data;
+
 SELECT * FROM staging_table LIMIT 5;
 
 
