@@ -16,7 +16,7 @@ ALTER TABLE staging_table RENAME COLUMN "Average Covered Charges" TO avg_covered
 ALTER TABLE staging_table RENAME COLUMN "Average Total Payments" TO avg_total_payments;
 ALTER TABLE staging_table RENAME COLUMN "Average Medicare Payments" TO avg_medi_payments;
 
--- Check for duplicates
+-- Check for duplicate rows
 SELECT 
     COUNT(*) AS original_rows,
     (SELECT COUNT(*) FROM (SELECT DISTINCT * FROM staging_table) AS distinct_subquery) AS distinct_rows
@@ -51,6 +51,19 @@ UPDATE staging_table SET avg_medi_payments = LTRIM(avg_medi_payments, '$');
 ALTER TABLE staging_table ALTER COLUMN avg_covered_charges TYPE numeric USING avg_covered_charges::numeric;
 ALTER TABLE staging_table ALTER COLUMN avg_total_payments TYPE numeric USING avg_total_payments::numeric;
 ALTER TABLE staging_table ALTER COLUMN avg_medi_payments TYPE numeric USING avg_medi_payments::numeric;
+
+-- Check ranges for charges and payments columns for any unreasonable values
+SELECT
+	MIN(avg_covered_charges) AS min_avg_cov_charge,
+	MAX(avg_covered_charges) AS max_avg_cov_charge,
+	MIN(avg_total_payments) AS min_avg_total_payments,
+	MAX(avg_total_payments) AS max_avg_total_payments,
+	MIN(avg_medi_payments) AS min_avg_medi_payments,
+	MAX(avg_medi_payments) AS max_avg_medi_payments
+FROM staging_table;
+
+-- Add primary key
+ALTER TABLE staging_table ADD COLUMN id SERIAL PRIMARY KEY;
 
 SELECT * FROM staging_table LIMIT 5;
 
