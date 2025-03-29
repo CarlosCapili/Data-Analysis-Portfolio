@@ -11,7 +11,7 @@ The complete end-to-end data analysis process is used for every project - if not
 ## Projects
 The projects are separated by tools used. Click on the tool to view the projects using the respective tool.
 
-*Tip: hold the CTRL button when clicking the project name to open the project in a new tab*
+*Tip: hold the CTRL button when clicking the project folder to open a new tab*
 
 [SQL Analysis Projects](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/SQL%20Analysis%20Projects)
 
