@@ -30,7 +30,7 @@ The remaining skills such as hadoop (22%), spark (27%), aws (25%), tableau (18%)
    - Boston, MA
    - Chicago, IL
 
-Willingness to relocate is important when searching for a job. Searching for a data science job in these cities can guarantee an individual can apply to more jobs.
+Willingness to relocate is important when searching for a job. Searching for a data science job in these cities can guarantee a higher application success rate, however competition will be high as well.
   
 4. Sectors with the most data science job openings are:
    - Information Technology (31%)
