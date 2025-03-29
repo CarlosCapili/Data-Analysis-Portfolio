@@ -10,7 +10,12 @@ The complete end-to-end data analysis process is used for every project - if not
 
 ## Projects
 The projects are separated by tools used. Click on the tool to view the projects using the respective tool.
+
 *Tip: hold the CTRL button when clicking the project name to open the project in a new tab*
+
+Python Projects
+SQL Projects
+Power BI Dashboards
 
 | Name | Tools Used | Purpose |
 |-|-|-|
