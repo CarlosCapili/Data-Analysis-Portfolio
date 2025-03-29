@@ -5,7 +5,7 @@ This folder contains full end-to-end data analysis projects using SQL, from crea
 | Project Name | Description |
 |-|-|
 | [Fictional CRM Sales Opportunities](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/SQL%20Analysis%20Projects/Fictional%20CRM%20Sales%20Opportunities) | To determine how each sales agent/team/regional office is performing, what are the highest selling products, which sector is generating the most money, etc. |
-| [Electric Vehicle Washington State](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/SQL%20Analysis%20Projects/Electric%20Vehicle%20Washington%20State)  To generate insights on EV adoption trends in Washington State | 
+| [Electric Vehicle Washington State](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/SQL%20Analysis%20Projects/Electric%20Vehicle%20Washington%20State) | To generate insights on EV adoption trends in Washington State | 
 | [Consumer Trends](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/SQL%20Analysis%20Projects/Consumer%20Shopping%20Trends) | To identify trends in consumer retail purchasing | 
 | [Heart Attacks in Germany](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/SQL%20Analysis%20Projects/Heart%20Attacks%20in%20Germany) | To generate and report insights about heart attack occurences in Germany |
 | [Toronto Auto Theft](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/SQL%20Analysis%20Projects/Toronto_AutoTheft-Analysis) | To gain insights on the rise of auto thefts in Toronto by identifying auto theft trends, location hotspots, and more |
