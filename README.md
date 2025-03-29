@@ -9,7 +9,9 @@ The complete end-to-end data analysis process is used for every project - if not
 4. Interpretation and visualization 
 
 ## Projects
+The projects are separated by tools used. Click on the tool to view the projects using the respective tool.
 *Tip: hold the CTRL button when clicking the project name to open the project in a new tab*
+
 | Name | Tools Used | Purpose |
 |-|-|-|
 | [Banana Quality](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/Banana%20Quality) | Python, Jupyter Notebook | To analyze banana quality from various countries |
