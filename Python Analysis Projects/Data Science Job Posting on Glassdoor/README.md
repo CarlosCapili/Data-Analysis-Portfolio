@@ -40,15 +40,15 @@ Willingness to relocate is important when searching for a job. Searching for a d
    - Finance (5%)
   
 5. Job openings by size of the company:
-   - 51 to 200 employees
-   - 1001 to 5000 employeess
+   - 51 to 200 employees (Most job openings)
+   - 1001 to 5000 employees
    - 201 to 500 employees
    - 1 to 50 employees
    - 10000+ employees
    - 501 to 1000 employees
    - 5001 to 10000 employees
   
-There are more data science jobs in smaller companies. Individuals will have a much higher success rate in searching for a data science job in companies that small startups (1 to 50 employees) up to medium size (1001 to 5000 employees). The larger companies are more competitive and will require more specialized skills.
+There are more data science jobs in smaller companies. Individuals will have a much higher success rate in searching for a data science job in companies that are small startups (1 to 50 employees) up to medium size (1001 to 5000 employees). The larger companies are more competitive and will require more specialized skills.
 
 Here are some of the highest paying locations, sectors, and industries:
 
