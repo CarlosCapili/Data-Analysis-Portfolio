@@ -85,7 +85,7 @@ Homes are a likely place for crimes to occur with almost a quarter of the crimes
 
 *The Unknown bar indicates that it is unknown whether a weapon was used for the reported crime. It accounts for 58.24% of reported crimes.*
 
-![alt text](image-6.png)
+![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime/Plots/image-6.png)
 
 8. Crimes Reported By Status:
 - Investigation Continued - 76.75%
@@ -94,7 +94,7 @@ Homes are a likely place for crimes to occur with almost a quarter of the crimes
 - Juvenile Arrest - 0.34%
 - Juvenile Other - 0.21%
 
-![alt text](image-7.png)
+![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime/Plots/image-7.png)
 
 9. Time It Takes To Report A Crime:
 - Same Day - 51.20%
@@ -103,5 +103,5 @@ Homes are a likely place for crimes to occur with almost a quarter of the crimes
 - 60+ Days - 4.05%
 - 29-60 Days - 2.59%
 
-![alt text](image-8.png)
+![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime/Plots/image-8.png)
 
