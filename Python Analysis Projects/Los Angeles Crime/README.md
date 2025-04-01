@@ -11,7 +11,7 @@ To generate a report giving readers a better understanding of crime in LA
 
 ## Findings:
 
-1. Crime Experienced By Age Group:
+1. Crime Victims By Age Group:
   - Adult (26-40) - 40%
   - Middle Aged (41-60) - 30%
   - Young Adult (19-25) - 15%
@@ -23,7 +23,7 @@ Individuals between 26 to 60 years old are victims of the majority of crimes wit
 
 ![alt text](image.png)
 
-2. Crime Experienced By Race:
+2. Crime Victims By Race:
   - Hispanic/Latin - 40%
   - White - 25%
   - Black - 18%
@@ -31,10 +31,50 @@ Individuals between 26 to 60 years old are victims of the majority of crimes wit
   - Asian - 5%
 
 Approximately 285,000 crimes reported have Hispanic/Latin as victims, 180,000 crimes reported have Whites as victims, 131,000 have Blacks as victims, and 37,000 have Asians as victims
+
 *The Unknown bar in the plot below represents the race of the victim to which the crime has been reported is unknown*
 
 ![alt text](image-1.png)
 
+3. Crimes Victims By Sex:
+ - Male - 50%
+ - Female - 48%
+ - Unknown - 1%
+
+*The Unknown sex represents the sex of the victim to which the crime has been reported is unknown*
+
+ ![alt text](image-2.png)
+
+ 4. 5 Most Reported Crimes in LA:
+ - Battery - Simple Assault - 10.28%
+ - Theft of Identity - 8.21%
+ - Burglary From Vehicle - 8.17%
+ - Assault With Deadly Weapon, Aggravated Assault - 7.16%
+ - Intimate Partner - Simple Assault - 6.45%
+
+The most reported crime in LA is Battery - Simple Assault with over 70,000 occurances while only accounting for 10.28% of total crime in LA
+
+![alt text](image-3.png)
+
+5. Crimes Reported By Area:
+- Central - 7.03%
+- Southwest - 6.43%
+- 77th Street - 6.34%
+- Pacific - 5.67%
+- Hollywood - 5.32%
+
+![alt text](image-4.png)
+
+6. Crimes Reported By Premise:
+- Single Family Dwelling - 22.00%
+- Street - 18.47%
+- Multi-Unit Dwelling (Apartment, Duplex, Etc) - 15.51%
+- Parking Lot - 6.37%
+- Sidewalk - 5.24%
+
+Homes are a likely place for crimes to occur with almost a quarter of the crimes reported taking place in a Single Family Dwelling with over 157,000 incidents. Over 111,000 crimes reported have occurred in a Mult-Unit Dwelling. Homes account for 37.51% of premises for which crimes have been reported
+
+![alt text](image-5.png)
 
 
 
