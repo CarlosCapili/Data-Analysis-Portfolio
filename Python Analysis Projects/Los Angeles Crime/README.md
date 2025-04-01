@@ -19,11 +19,23 @@ To generate a report giving readers a better understanding of crime in LA
   - Teen (15-18) - 2%
   - Child (0-14) - 2%
 
-Individuals aged 26+ are victims of the majority of crimes at approximately 500,000 reported crimes which accounts for 70% of total crimes reported in LA
+Individuals between 26 to 60 years old are victims of the majority of crimes with approximately 500,000 reported crimes accounting for 70% of total crimes reported in LA
+
 ![alt text](image.png)
 
 2. Crime Experienced By Race:
-  - 
+  - Hispanic/Latin - 40%
+  - White - 25%
+  - Black - 18%
+  - Other - 9%
+  - Asian - 5%
+
+Approximately 285,000 crimes reported have Hispanic/Latin as victims, 180,000 crimes reported have Whites as victims, 131,000 have Blacks as victims, and 37,000 have Asians as victims
+*The Unknown bar in the plot below represents the race of the victim to which the crime has been reported is unknown*
+
+![alt text](image-1.png)
+
+
 
 
 - More than 50% of victims are aged 25 and over
