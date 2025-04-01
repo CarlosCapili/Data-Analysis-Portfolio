@@ -3,15 +3,29 @@
 https://catalog.data.gov/dataset/crime-data-from-2020-to-present
 
 ## Purpose
-To report crime data in Los Angeles and gain a better understanding
+To generate a report giving readers a better understanding of crime in LA
 
 ## Tools
-- Jupyter Notebook
 - Python (pandas, matplotlib, seaborn)
+- Jupyter Notebook
 
 ## Findings:
 
-![image](https://github.com/user-attachments/assets/458434da-3734-43d5-9b02-07a53484e4ae) ![image](https://github.com/user-attachments/assets/f3d05019-bafd-4e5f-8055-c7f4b8ca58c2)
+1. Crime Experienced By Age Group:
+  - Adult (26-40) - 40%
+  - Middle Aged (41-60) - 30%
+  - Young Adult (19-25) - 15%
+  - Senior (61+) - 11%
+  - Teen (15-18) - 2%
+  - Child (0-14) - 2%
+
+Individuals aged 26+ are victims of the majority of crimes at approximately 500,000 reported crimes which accounts for 70% of total crimes reported in LA
+![alt text](image.png)
+
+2. Crime Experienced By Race:
+  - 
+
+
 - More than 50% of victims are aged 25 and over
 - 1 in 3 people aged 35-49 are victims of a a crime or 30.31%, followed by people aged 25-34 at 28.10%, and 50-64 at 18.47%
 - 1 in 10 people aged 20-24 are vicitms of a crime or 9.86%
