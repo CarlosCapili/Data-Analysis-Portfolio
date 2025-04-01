@@ -21,7 +21,7 @@ To generate a report giving readers a better understanding of crime in LA
 
 Individuals between 26 to 60 years old are victims of the majority of crimes with approximately 500,000 reported crimes accounting for 70% of total crimes reported in LA
 
-![alt text](image.png)
+![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime/Plots/image.png)
 
 2. Crime Victims By Race:
   - Hispanic/Latin - 40%
@@ -43,7 +43,7 @@ Approximately 285,000 crimes reported have Hispanic/Latin as victims, 180,000 cr
 
 *The Unknown sex represents the sex of the victim to which the crime has been reported is unknown*
 
- ![alt text](image-2.png)
+ ![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime/Plots/image-2.png)
 
  4. 5 Most Reported Crimes in LA:
  - Battery - Simple Assault - 10.28%
@@ -54,7 +54,7 @@ Approximately 285,000 crimes reported have Hispanic/Latin as victims, 180,000 cr
 
 The most reported crime in LA is Battery - Simple Assault with over 70,000 occurances while only accounting for 10.28% of total crime in LA
 
-![alt text](image-3.png)
+![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime/Plots/image-3.png)
 
 5. Crimes Reported By Area:
 - Central - 7.03%
@@ -63,7 +63,7 @@ The most reported crime in LA is Battery - Simple Assault with over 70,000 occur
 - Pacific - 5.67%
 - Hollywood - 5.32%
 
-![alt text](image-4.png)
+![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime/Plots/image-4.png)
 
 6. Crimes Reported By Premise:
 - Single Family Dwelling - 22.00%
@@ -74,7 +74,7 @@ The most reported crime in LA is Battery - Simple Assault with over 70,000 occur
 
 Homes are a likely place for crimes to occur with almost a quarter of the crimes reported taking place in a Single Family Dwelling with over 157,000 incidents. Over 111,000 crimes reported have occurred in a Mult-Unit Dwelling. Homes account for 37.51% of premises for which crimes have been reported
 
-![alt text](image-5.png)
+![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime/Plots/image-5.png)
 
 
 
