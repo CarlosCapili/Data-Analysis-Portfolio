@@ -34,7 +34,7 @@ Approximately 285,000 crimes reported have Hispanic/Latin as victims, 180,000 cr
 
 *The Unknown bar in the plot below represents the race of the victim to which the crime has been reported is unknown*
 
-![alt text](image-1.png)
+![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime/Plots/image-1.png)
 
 3. Crimes Victims By Sex:
  - Male - 50%
@@ -75,6 +75,7 @@ The most reported crime in LA is Battery - Simple Assault with over 70,000 occur
 Homes are a likely place for crimes to occur with almost a quarter of the crimes reported taking place in a Single Family Dwelling with over 157,000 incidents. Over 111,000 crimes reported have occurred in a Mult-Unit Dwelling. Homes account for 37.51% of premises for which crimes have been reported
 
 ![alt text](image-5.png)
+
 
 
 
