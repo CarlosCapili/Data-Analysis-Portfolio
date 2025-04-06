@@ -1,143 +1,88 @@
--- What is the percentages of car makes in Washington State?
-SELECT
+-- How many EV's are registered in Washington State?
+SELECT 
+	COUNT(DISTINCT dol_vehicle_id) AS registered_evs
+FROM ev_pop;
+
+-- What are the most common EV makes?
+SELECT 
 	make,
 	COUNT(*) AS ev_count,
-	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM ev_pop_final), 2) AS make_pct
-FROM ev_pop_final
+	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM ev_pop), 2) AS make_pct
+FROM ev_pop
 GROUP BY make
-ORDER BY make_pct DESC
+ORDER BY ev_count DESC;
 
--- How many registered ev's are there in each county?
+-- How many EV's are registered in each county?
 SELECT
 	county,
 	COUNT(*) AS ev_count,
-	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM ev_pop_final), 2) AS ev_county_pct
-FROM ev_pop_final
+	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM ev_pop), 2) AS ev_county_pct
+FROM ev_pop
 GROUP BY county
 ORDER BY ev_count DESC;
 
--- How many registered ev's are there in each city?
+-- How many EV's are registered in each city?
 SELECT
 	city,
 	COUNT(*) AS ev_count,
-	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM ev_pop_final), 2) AS ev_city_pct
-FROM ev_pop_final
+	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM ev_pop), 2) AS ev_county_pct
+FROM ev_pop
 GROUP BY city
 ORDER BY ev_count DESC;
 
--- What brands are found in each county?
-SELECT
-	county,
-	make,
-	COUNT(*) AS make_count
-FROM ev_pop_final
-GROUP BY county, make
-ORDER BY county, make_count DESC;
-
--- What brands are found in each city?
-SELECT
-	city,
-	make,
-	COUNT(*) AS make_count
-FROM ev_pop_final
-GROUP BY city, make
-ORDER BY city, make_count DESC;
-
--- What car make is the most registered in each city and what is the percentage?
-WITH car_make_count AS (
+-- What are the most popular makes in the top 5 cities with registered EV's?
+-- Total EV count per city
+WITH total_city_count AS (
+	SELECT
+		city,
+		COUNT(*) AS city_ev_count
+	FROM ev_pop
+	GROUP BY city
+),
+-- Total EV count per city by make
+sub_city_count AS (
 	SELECT
 		city,
 		make,
-		COUNT(*) AS make_count,
-		DENSE_RANK() OVER(PARTITION BY city ORDER BY COUNT(*) DESC) AS rn
-	FROM ev_pop_final
+		COUNT(*) AS make_ev_count
+	FROM ev_pop
 	GROUP BY city, make
 )
 
 SELECT
-	make,
-	COUNT(*) AS city_count,
-	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(DISTINCT city) FROM car_make_count), 2) AS city_count_pct
-FROM car_make_count
-WHERE rn = 1
-GROUP BY make 
-ORDER BY city_count DESC
+	scc.city,
+	scc.make,
+	scc.make_ev_count,
+	ROUND(scc.make_ev_count * 100.0 / tcc.city_ev_count, 2) AS make_by_city_pct
+FROM sub_city_count AS scc
+JOIN total_city_count AS tcc
+	ON scc.city = tcc.city
+WHERE scc.city IN ('Seattle', 'Bellevue', 'Redmond', 'Vancouver', 'Bothell')
+ORDER BY tcc.city_ev_count DESC, make_by_city_pct DESC;
 
--- What are the top 10 common ev models that are registered in Washington State?
-WITH ranked_ev_models AS (
-	SELECT
-		model,
-		COUNT(*) AS model_count,
-		ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM ev_pop_final), 2) AS model_pct,
-		DENSE_RANK() OVER(ORDER BY COUNT(*) DESC) AS dr
-	FROM ev_pop_final
-	GROUP BY model
-	ORDER BY model_count DESC
-)
-
+-- Count the amount of cities for each make where it is registered as the number 1 EV
 SELECT
-	CASE WHEN dr <= 10 THEN model ELSE 'OTHER' END AS model,
-	CASE WHEN dr <= 10 THEN model_count ELSE (
-		SELECT SUM(model_count) 
-		FROM ranked_ev_models 
-		WHERE dr > 10
-	) END AS model_count,
-	CASE WHEN dr <= 10 THEN model_pct ELSE (
-		SELECT ROUND(SUM(model_count) * 100.0 /  (SELECT COUNT(*) FROM ev_pop_final), 2)
-		FROM ranked_ev_models 
-		WHERE dr > 10
-	) END AS model_pct
-FROM ranked_ev_models
-LIMIT 11
+	make,
+	COUNT(*) AS cities_registered
+FROM (
+	SELECT
+		city,
+		make,
+		COUNT(*) AS ev_count,
+		DENSE_RANK() OVER(PARTITION BY city ORDER BY COUNT(*) DESC) AS dr
+	FROM ev_pop
+	GROUP BY city, make
+) AS makes_per_city
+WHERE dr = 1
+GROUP BY make
+ORDER BY cities_registered DESC
 
--- What is the breakdown of ev_types?
+-- What is the EV type for registered EV's?
 SELECT
 	ev_type,
-	COUNT(*) AS ev_type_count,
-	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM ev_pop_final), 2) AS ev_type_pct
-FROM ev_pop_final
-GROUP BY ev_type
-ORDER BY ev_type_count DESC;
-
--- What are the top 10 car make for ev_type Battery Electric Vehicle (BEV)?
-SELECT 
-	model_year,
-	make,
-	model,
-	COUNT(*) AS car_count,
-	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM ev_pop_final), 2)
-FROM ev_pop_final
-WHERE ev_type = 'Battery Electric Vehicle (BEV)'
-GROUP BY model_year, make, model
-ORDER BY car_count DESC
-LIMIT 10;
-
--- What are the top 10 car make for ev_type Plug-in Hybrid Electric Vehicle (PHEV)?
-SELECT 
-	model_year,
-	make,
-	model,
-	COUNT(*) AS car_count
-FROM ev_pop_final
-WHERE ev_type = 'Plug-in Hybrid Electric Vehicle (PHEV)'
-GROUP BY model_year, make, model
-ORDER BY car_count DESC
-LIMIT 10;
-
--- What are the top 10 vehicles with the best electric_range?
-SELECT DISTINCT
-	model_year,
-	make,
-	model,
-	electric_range
-FROM ev_pop_final
-ORDER BY electric_range DESC
-LIMIT 10;
-
-
-
-
-
-
+	COUNT(*) ev_type_count,
+	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM ev_pop), 0) AS ev_type_pct
+FROM ev_pop
+GROUP BY ev_type;
 
 
