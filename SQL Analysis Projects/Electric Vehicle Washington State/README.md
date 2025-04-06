@@ -28,44 +28,29 @@ Some other makes outside the top 5 are BMW, Toyota, Volkswagen, Jeep, and Hyunda
 
 3. Top 5 cities with the most registered EV's and top 3 makes are:
      - Seattle - 31,700 EV's (16.41% of EV's in the state)
-
-          A. Tesla - 12,200 EV's (38.63% of Seattle EV's are Tesla)
-
-          B. Nissan - 2,791 (8.78%)
-
-          C. Chevrolet - 2,481 (7.80%) 
+          - Tesla - 12,200 EV's (38.63% of Seattle EV's are Tesla)
+          - Nissan - 2,791 (8.78%)
+          - Chevrolet - 2,481 (7.80%) 
 
      - Bellevue - 9,600 (5.00%)
-
-          A. Tesla - 5,841 (60.30%)
-
-          B. BMW - 540 (5.58%)
-
-          C. Nissan - 539 (5.56%)
+          - Tesla - 5,841 (60.30%)
+          - BMW - 540 (5.58%)
+          - Nissan - 539 (5.56%)
 
      - Redmond - 6,900 (3.58%)
-
-          A. Tesla - 4,159 (59.87%)
-
-          B. Nissan - 473 (6.81%)
-
-          C. BMW - 323 (4.65%)
+          - Tesla - 4,159 (59.87%)
+          - Nissan - 473 (6.81%)
+          - BMW - 323 (4.65%)
 
      - Vancouver - 6,800 (3.54%)
-
-          A. Tesla - 2,679 (39.04%)
-
-          B. Chevrolet - 588 (8.57%)
-
-          C. Nissan - 560 (8.16%)
+          - Tesla - 2,679 (39.04%)
+          - Chevrolet - 588 (8.57%)
+          - Nissan - 560 (8.16%)
 
      - Bothell - 6,300 (3.30%)
-
-          A. Tesla - 3,795 (59.37%)
-          
-          B. Nissan - 398 (6.23%)
-
-          C. BMW - 267 (4.18%)
+          - Tesla - 3,795 (59.37%)
+          - Nissan - 398 (6.23%)
+          - BMW - 267 (4.18%)
 
 4. There are 483 cities in Washington State. The top 5 EV makes where it is the most registered in the city are:
      - Tesla - 382 cities (79% of cities in Washington state have Tesla as the most registered EV)
