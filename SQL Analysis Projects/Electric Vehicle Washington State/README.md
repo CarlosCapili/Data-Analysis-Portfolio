@@ -74,5 +74,6 @@ Most Common EV Models:
 10. Jeep Wrangler (1.98)
 
 ## Dashboard
-
-
+![alt text](image-2.png)
+![alt text](image-3.png)
+![alt text](image-4.png)
