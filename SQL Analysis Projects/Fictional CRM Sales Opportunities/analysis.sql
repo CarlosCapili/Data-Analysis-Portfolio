@@ -1,173 +1,184 @@
--- How is each sales team performing against the rest?
+-- Create a table that combines the sales team, sales pipeline, products, and account tables
+CREATE TABLE sales_data AS 
+	SELECT 
+		sp.opportunity_id,
+		st.sales_agent,
+		st.manager,
+		st.regional_office,
+		sp.product,
+		prod.series,
+		prod.sales_price,
+		sp.account,
+		acc.sector,
+		acc.year_established,
+		acc.revenue,
+		acc.employees,
+		acc.office_location,
+		sp.deal_stage,
+		sp.engage_date,
+		sp.close_date,
+		sp.close_value
+	FROM sales_pipeline AS sp
+	LEFT JOIN sales_team AS st
+		ON sp.sales_agent = st.sales_agent
+	LEFT JOIN products AS prod
+		ON sp.product = prod.product
+	LEFT JOIN accounts AS acc
+		ON sp.account = acc.account
+
+-- Sales by regional office
 SELECT
-	st.manager,
-	SUM(sp.close_value) AS team_sales
-FROM sales_pipeline AS sp
-LEFT JOIN sales_team AS st
-	ON sp.sales_agent = st.sales_agent
-WHERE sp.close_value IS NOT NULL
-GROUP BY st.manager 
-ORDER BY team_sales DESC
+	regional_office,
+	SUM(close_value) AS sales_produced
+FROM sales_data	
+GROUP BY regional_office
+ORDER BY sales_produced DESC;
 
--- How is each sales agent for each team performing?
+-- Sales by manager
 SELECT 
-	sp.sales_agent,
-	st.manager,
-	SUM(close_value) AS agent_sales,
-	DENSE_RANK() OVER(PARTITION BY st.manager ORDER BY SUM(close_value) DESC)
-FROM sales_pipeline AS sp
-LEFT JOIN sales_team AS st
-	ON sp.sales_agent = st.sales_agent 
-WHERE sp.close_value IS NOT NULL
-GROUP BY sp.sales_agent, st.manager
+	regional_office,
+	manager,
+	SUM(close_value) AS sales_produced
+FROM sales_data
+GROUP BY regional_office, manager
+ORDER BY regional_office, sales_produced DESC;
 
--- Who are the top 5 sales agents?
+-- Sales by agent
 SELECT 
+	regional_office,
+	manager,
 	sales_agent,
-	SUM(close_value) AS agent_sales
-FROM sales_pipeline 
-WHERE close_value IS NOT NULL
-GROUP BY sales_agent
-ORDER BY agent_sales DESC
-LIMIT 5
+	SUM(close_value) AS sales_produced
+FROM sales_data
+GROUP BY regional_office, manager, sales_agent
+ORDER BY sales_produced DESC;
 
--- What is the average time to close a deal for each agent?
-WITH avg_deal_time AS (
+-- Sales by product
+SELECT
+	product,
+	sales_price,
+	COUNT(*) AS units_sold,
+	SUM(close_value) AS sales_produced
+FROM sales_data
+GROUP BY product, sales_price
+ORDER BY units_sold DESC;
+
+-- Sales by sector
+SELECT
+	sector,
+	SUM(close_value) AS sales_produced
+FROM sales_data
+WHERE sector IS NOT NULL
+GROUP BY sector
+ORDER BY sales_produced DESC;
+
+-- Compare the total projected sales (sales price of products) vs the total real sales (actual closing price) on winning deals
+WITH projected_vs_real_sales AS (
 	SELECT
+		opportunity_id,
+		regional_office,
+		manager,
 		sales_agent,
-		engage_date,
-		close_date,
-		(close_date - engage_date) AS time_to_close
-	FROM sales_pipeline
-	WHERE engage_date IS NOT NULL
-		AND close_date IS NOT NULL
-)
-
-SELECT 
-	sales_agent,
-	ROUND(AVG(time_to_close), 1) AS time_to_close
-FROM avg_deal_time
-GROUP BY sales_agent
-ORDER BY time_to_close DESC
-
--- How is each regional office performing?
-SELECT 
-	st.regional_office,
-	SUM(close_value) AS office_sales
-FROM sales_pipeline AS sp
-LEFT JOIN sales_team AS st
-	ON sp.sales_agent = st.sales_agent 
-WHERE sp.close_value IS NOT NULL
-GROUP BY st.regional_office
-ORDER BY office_sales DESC
-
--- What are the total sales for each product?
-SELECT 
-	product,
-	SUM(close_value) AS product_sales
-FROM sales_pipeline 
-WHERE close_value IS NOT NULL
-	AND deal_stage = 'Won'
-GROUP BY product
-ORDER BY product_sales DESC
-
--- What products have a better win rate? (Show breakdown between won and lost in the deal_stage column)
-WITH product_count AS (
-	SELECT
 		product,
-		deal_stage,
-		CASE WHEN deal_stage = 'Won' THEN 1 ELSE 0 END AS win_count,
-		CASE WHEN deal_stage = 'Lost' THEN 1 ELSE 0 END AS lost_count
-	FROM sales_pipeline
-	WHERE deal_stage IN ('Won', 'Lost')
+		account,
+		sector,
+		sales_price,
+		close_value
+	FROM sales_data
+	WHERE deal_stage = 'Won'
 )
 
+-- Total projected sales vs total real sales by regional office
 SELECT
-	product,
-	SUM(win_count) AS win_count,
-	SUM(lost_count) AS lost_count,
-	ROUND(SUM(win_count) * 1.0 / (SUM(win_count) + SUM(lost_count)) * 100.0, 1) AS win_rate
-FROM product_count
-GROUP BY product
-ORDER BY win_rate DESC
+	regional_office,
+	SUM(sales_price) AS total_projected_sales,
+	SUM(close_value) AS total_actual_sales,
+	(SUM(close_value) - SUM(sales_price)) AS projected_actual_diff
+FROM projected_vs_real_sales
+GROUP BY regional_office
+ORDER BY projected_actual_diff DESC;
 
--- What are the total sales for each sector?
+-- By manager
 SELECT
-	acc.sector,
-	SUM(sp.close_value) AS sector_sales
-FROM sales_pipeline AS sp
-INNER JOIN accounts AS acc
-	ON sp.account = acc.account
-WHERE sp.close_value IS NOT NULL
-GROUP BY acc.sector
-ORDER BY sector_sales DESC
+	regional_office,
+	manager,
+	SUM(sales_price) AS total_projected_sales,
+	SUM(close_value) AS total_actual_sales,
+	(SUM(close_value) - SUM(sales_price)) AS projected_actual_diff
+FROM projected_vs_real_sales
+GROUP BY regional_office, manager
+ORDER BY regional_office, projected_actual_diff DESC;
 
--- What are the sales of each product in each sector?
+-- By sales agent
 SELECT
-	sp.product,
-	acc.sector,
-	SUM(sp.close_value) AS product_sales,
-	DENSE_RANK() OVER(PARTITION BY sp.product ORDER BY SUM(sp.close_value) DESC)
-FROM sales_pipeline AS sp
-INNER JOIN accounts AS acc
-	ON sp.account = acc.account
-WHERE close_value IS NOT NULL
-GROUP BY acc.sector, sp.product
+	regional_office,
+	manager,
+	sales_agent,
+	SUM(sales_price) AS total_projected_sales,
+	SUM(close_value) AS total_actual_sales,
+	(SUM(close_value) - SUM(sales_price)) AS projected_actual_diff
+FROM projected_vs_real_sales
+GROUP BY regional_office, manager, sales_agent
+ORDER BY regional_office, projected_actual_diff DESC;
 
--- What is the total amount of sales each account has?
-SELECT
+-- Top 3 accounts for each office
+SELECT 
+	regional_office,
 	account,
-	SUM(close_value) AS account_sales
-FROM sales_pipeline
-WHERE close_value IS NOT NULL
-GROUP BY account
-ORDER BY account_sales DESC
+	total_sales
+FROM (
+	SELECT
+		regional_office,
+		account,
+		SUM(close_value) AS total_sales,
+		DENSE_RANK() OVER(PARTITION BY regional_office ORDER BY SUM(close_value) DESC) AS dr
+	FROM sales_data
+	GROUP BY regional_office, account
+	HAVING SUM(close_value) IS NOT NULL
+) AS top_accounts
+WHERE dr <= 3
 
--- How much net profit does each sales_agent/team/office bring in?
-
--- Sales agent real sales
+-- What is the average close time (in days) for each agent?
 SELECT
-	sp.sales_agent,
-	st.manager,
-	SUM(sp.close_value) AS total_closing_val,
-	SUM(pr.sales_price) AS total_sales_price,
-	SUM(close_value) - SUM(sales_price) AS net_sales
-FROM sales_pipeline AS sp
-LEFT JOIN sales_team AS st
-	ON sp.sales_agent = st.sales_agent
-LEFT JOIN products as pr
-	ON sp.product = pr.product
-WHERE sp.close_value IS NOT NULL
-	AND sp.deal_stage = 'Won' 
-GROUP BY sp.sales_agent, st.manager
-ORDER BY st.manager, net_sales DESC
+	regional_office, 
+	manager,
+	sales_agent,
+	ROUND(AVG(time_to_close), 0) AS avg_close_time
+FROM (
+	SELECT 
+		regional_office,
+		manager,
+		sales_agent,
+		close_date,
+		engage_date,
+		(close_date - engage_date) AS time_to_close
+	FROM sales_data
+	WHERE close_date IS NOT NULL
+		AND engage_date IS NOT NULL
+) AS avg_agent_close_time
+GROUP BY regional_office, manager, sales_agent
+ORDER BY regional_office, avg_close_time DESC;
 
--- Team real sales
+-- What is the closing rate for each office?
 SELECT
-	st.manager,
-	SUM(sp.close_value) - SUM(pr.sales_price) AS net_sales
-FROM sales_pipeline AS sp
-LEFT JOIN sales_team AS st
-	ON sp.sales_agent = st.sales_agent
-LEFT JOIN products AS pr
-	ON sp.product = pr.product
-WHERE sp.close_value IS NOT NULL
-	AND sp.deal_stage = 'Won'
-GROUP BY st.manager
-ORDER BY net_sales DESC
+	regional_office,
+	COUNT(*) FILTER(WHERE deal_stage = 'Won') AS deals_closed,
+	COUNT(*) FILTER(WHERE deal_stage = 'Lost') AS deals_lost,
+	ROUND(COUNT(*) FILTER(WHERE deal_stage = 'Won') * 100.0 / COUNT(*) FILTER(WHERE deal_stage IN ('Won', 'Lost')), 1) AS deals_closed_pct
+FROM sales_data
+GROUP BY regional_office
 
--- Regional office real/projected sales
-SELECT
-	st.regional_office,
-	SUM(sp.close_value) AS sum_close_val,
-	SUM(pr.sales_price) AS sum_sales_price,
-	SUM(sp.close_value) - SUM(pr.sales_price) AS net_sales
-FROM sales_pipeline AS sp
-LEFT JOIN sales_team AS st
-	ON sp.sales_agent = st.sales_agent
-LEFT JOIN products AS pr
-	ON sp.product = pr.product
-WHERE sp.close_value IS NOT NULL
-	AND sp.deal_stage = 'Won'
-GROUP BY st.regional_office
-ORDER BY net_sales DESC
+SELECT * FROM sales_data LIMIT 5;
+
+
+
+
+
+
+
+
+
+
+
+
+
