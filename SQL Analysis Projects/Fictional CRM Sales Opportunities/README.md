@@ -67,6 +67,6 @@ The most common product sold is the GTX Basic selling at $550 with 1800 units so
 Find what sectors each product sells best and recommend which teams should pursue these deals.
 
 ## Dashboard:
-![image](https://github.com/user-attachments/assets/179250fa-a863-4fbd-b278-cfe9df38949e)
-
+![alt text](image.png)
+![alt text](image-1.png)
 
