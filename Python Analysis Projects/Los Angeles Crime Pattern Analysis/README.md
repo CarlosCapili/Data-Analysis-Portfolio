@@ -21,7 +21,7 @@ To generate a report giving readers a better understanding of crime in LA
 
 Individuals between 26 to 60 years old are victims of the majority of crimes with approximately 500,000 reported crimes accounting for 70% of total crimes reported in LA.
 
-![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime/Plots/image.png)
+![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/image.png)
 
 2. Crime Victims By Race:
   - Hispanic/Latin - 40%
@@ -34,7 +34,7 @@ Approximately 285,000 crimes reported have Hispanic/Latin as victims, 180,000 cr
 
 *The Unknown bar represents the race of the victim to which the crime has been reported is unknown*
 
-![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime/Plots/image-1.png)
+![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/image-1.png)
 
 3. Crimes Victims By Sex:
  - Male - 50%
@@ -43,7 +43,7 @@ Approximately 285,000 crimes reported have Hispanic/Latin as victims, 180,000 cr
 
 *The Unknown sex represents the sex of the victim to which the crime has been reported is unknown*
 
- ![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime/Plots/image-2.png)
+ ![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/image-2.png)
 
  4. 5 Most Reported Crimes in LA:
  - Battery - Simple Assault - 10.28%
@@ -54,7 +54,7 @@ Approximately 285,000 crimes reported have Hispanic/Latin as victims, 180,000 cr
 
 The most reported crime in LA is Battery - Simple Assault with over 70,000 occurances while only accounting for 10.28% of total crime in LA.
 
-![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime/Plots/image-3.png)
+![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/image-3.png)
 
 5. Crimes Reported By Area:
 - Central - 7.03%
@@ -63,7 +63,7 @@ The most reported crime in LA is Battery - Simple Assault with over 70,000 occur
 - Pacific - 5.67%
 - Hollywood - 5.32%
 
-![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime/Plots/image-4.png)
+![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/image-4.png)
 
 6. Crimes Reported By Premise:
 - Single Family Dwelling - 22.00%
@@ -74,7 +74,7 @@ The most reported crime in LA is Battery - Simple Assault with over 70,000 occur
 
 Homes are a likely place for crimes to occur with almost a quarter of the crimes reported taking place in a Single Family Dwelling with over 157,000 incidents. Over 111,000 crimes reported have occurred in a Mult-Unit Dwelling. Homes account for 37.51% of premises for which crimes have been reported.
 
-![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime/Plots/image-5.png)
+![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/image-5.png)
 
 7. Crimes Reported By Weapon Used:
 - Strong-Arm (Hands, Fist, Feet Or Bodily Force) - 23.06%
@@ -85,7 +85,7 @@ Homes are a likely place for crimes to occur with almost a quarter of the crimes
 
 *The Unknown bar indicates that it is unknown whether a weapon was used for the reported crime. It accounts for 58.24% of reported crimes.*
 
-![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime/Plots/image-6.png)
+![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/image-6.png)
 
 8. Crimes Reported By Status:
 - Investigation Continued - 76.75%
@@ -94,7 +94,7 @@ Homes are a likely place for crimes to occur with almost a quarter of the crimes
 - Juvenile Arrest - 0.34%
 - Juvenile Other - 0.21%
 
-![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime/Plots/image-7.png)
+![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/image-7.png)
 
 9. Time It Takes To Report A Crime:
 - Same Day - 51.20%
@@ -103,5 +103,5 @@ Homes are a likely place for crimes to occur with almost a quarter of the crimes
 - 60+ Days - 4.05%
 - 29-60 Days - 2.59%
 
-![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime/Plots/image-8.png)
+![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/image-8.png)
 

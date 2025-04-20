@@ -67,6 +67,6 @@ The most common product sold is the GTX Basic selling at $550 with 1800 units so
 Find what sectors each product sells best and recommend which teams should pursue these deals.
 
 ## Dashboard:
-![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/SQL%20Analysis%20Projects/Fictional%20CRM%20Sales%20Opportunities/Power%20BI%20Screenshots/image.png)
-![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/SQL%20Analysis%20Projects/Fictional%20CRM%20Sales%20Opportunities/Power%20BI%20Screenshots/image-1.png)
+![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/SQL%20Analysis%20Projects/CRM%20Sales%20Insights/Power%20BI%20Screenshots/image.png)
+![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/SQL%20Analysis%20Projects/CRM%20Sales%20Insights/Power%20BI%20Screenshots/image-1.png)
 
