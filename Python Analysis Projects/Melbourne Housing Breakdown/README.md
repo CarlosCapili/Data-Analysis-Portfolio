@@ -14,6 +14,7 @@ Perform exploratory data analysis on the Melbourne Housing dataset and to see ho
 1. The average price for a dwelling in Melbourne is \$1,075,488 (Australian Dollar)
 
 2. Housing units can be classified into 3 categories: House (or cottage, villa, semi, terrace), Unit (or duplex), and Townhouse. The following table displays statistics for each dwelling:
+
 | Dwelling Type | Avg. Price ($AUD) | Max. Price ($AUD) | Min. Price ($AUD) | Median Price ($AUD) |
 |-|-|-|-|-|
 | House | 1,242,409 | 9,000,000 | 131,000 | 1,080,000 |
