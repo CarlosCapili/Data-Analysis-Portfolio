@@ -3,23 +3,30 @@
 https://www.kaggle.com/datasets/dansbecker/melbourne-housing-snapshot
 
 ## Purpose
-To perform exploratory data analysis on the Melbourne Housing dataset to identify trends and patterns regarding housing price in relation to number of rooms (Bed and Bath), car parking, distance to CBD (Central Business District), etc.
+Perform exploratory data analysis on the Melbourne Housing dataset and to see how expensive housing is.
 
 ## Tools
 - Jupyter Notebook
 - Python (pandas, seaborn, matplotlib)
 
 ## Findings:
-- The average housing price in Melbourne is \$1.13 million
-- 75\% of housing costs above \$750,000
-- Housing 20km and less from the Central Business District (CBD) costs can range between \$500,000 to 2.5 million
-- The most expensive region of Melbourne is Southern Metropolitan with an average price of \$1.43 million
-- The least expensive region is Eastern Victoria with an average price of \$430,000
-- Region Housing Price rankings:
-    1. Southern Metropolitan - \$1.43 million
-    2. Northern Victoria - \$1.36 million
-    3. Northern Metropolitan - \$1.08 million
-    4. Eastern Metropolitan - \$940,000
-    5. South-Eastern Metropolitan - \$746,000
-    6. Western Metropolitan  - \$738,000
-    7. Eastern Victoria - \$430,000
+
+1. The average price for a dwelling in Melbourne is \$1,075,488 (Australian Dollar)
+
+2. Housing units can be classified into 3 categories: House (or cottage, villa, semi, terrace), Unit (or duplex), and Townhouse. The following table displays statistics for each dwelling:
+| Dwelling Type | Avg. Price ($AUD) | Max. Price ($AUD) | Min. Price ($AUD) | Median Price ($AUD) |
+|-|-|-|-|-|
+| House | 1,242,409 | 9,000,000 | 131,000 | 1,080,000 |
+| Townhouse | 933,930 | 3,475,000 | 300,000 | 846,000 |
+| Unit | 605,288 | 3,625,000 | 85,000 | 560,000 |
+
+3. The most expensive housing on average is located in the Southern Metropolitan region of Melbourne with an average housing price of \$1,374,652, while Western Victoria has the least expensive housing on average at \$397,523
+
+![alt text](image.png)
+
+4. 75\% of housing costs at least \$650,000
+
+
+
+
+
