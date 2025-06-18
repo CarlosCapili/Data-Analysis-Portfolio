@@ -11,4 +11,4 @@ This folder contains full end-to-end data analysis projects using SQL, from crea
 | [Toronto Auto Theft](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/SQL%20Analysis%20Projects/Toronto%20Auto%20Theft%20Analysis) | To gain insights on the rise of auto thefts in Toronto by identifying auto theft trends, location hotspots, and more |
 | [Video Game Sales](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/SQL%20Analysis%20Projects/Video%20Game%20Sales%20Analysis) | To find out what are the top selling games/franchises, publishers, genres, and more, in the past decades| 
 | [NBA Stats](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/SQL%20Analysis%20Projects/NBA%20Player%20Stat%20Analysis) | To determine top performers in categories like scoring, assists, and rebounds, for each season |
-| [Netflix Movies and TV Shows](https://github.com/CarlosCapili/Data-Analysis-Portfolio/tree/main/SQL%20Analysis%20Projects/Netflix%20Movies%20and%20TV%20Shows) | To provide a breakdown on Netflix content by movies/TV, directors, etc. |
+
