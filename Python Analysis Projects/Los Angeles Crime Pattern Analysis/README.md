@@ -1,17 +1,21 @@
-# Los Angeles Crime
-## Source Data
-https://catalog.data.gov/dataset/crime-data-from-2020-to-present
+# Los Angeles Crime Analysis
 
-## Purpose
-To generate a report giving readers a better understanding of crime in LA
+## Summary 
+This project explores Los Angeles crime trends using reported crime incidents provided by the Los Angeles Police Department on Data.gov. Python was used to perform exploratory data analysis with a primary focus on determining victim demographics, location, and type of crime, to aid in community support and inform the LAPD on where to focus their resources for crime prevention initiatives.
+
+Data Source - https://catalog.data.gov/dataset/crime-data-from-2020-to-present
 
 ## Tools
 - Python (pandas, matplotlib, seaborn)
 - Jupyter Notebook
 
-## Findings:
+The entire project was completed using Python in a Jupyter Notebook environment. Data preprocessing was performed using the Pandas and Numpy libraries, while Seaborn and Matplotlib were used for data visualization.
 
-1. Crime Victims By Age Group:
+## Key Findings :
+
+Victim Demographics
+
+1. Victims By Age Group:
   - Adult (26-40) - 40%
   - Middle Aged (41-60) - 30%
   - Young Adult (19-25) - 15%
@@ -23,7 +27,7 @@ Individuals between 26 to 60 years old are victims of the majority of crimes wit
 
 ![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/image.png)
 
-2. Crime Victims By Race:
+2. Victims By Race:
   - Hispanic/Latin - 40%
   - White - 25%
   - Black - 18%
@@ -36,7 +40,7 @@ Approximately 285,000 crimes reported have Hispanic/Latin as victims, 180,000 cr
 
 ![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/image-1.png)
 
-3. Crimes Victims By Sex:
+3. Victims By Sex:
  - Male - 50%
  - Female - 48%
  - Unknown - 1%
@@ -105,3 +109,4 @@ Homes are a likely place for crimes to occur with almost a quarter of the crimes
 
 ![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/image-8.png)
 
+## Challenges Faced
