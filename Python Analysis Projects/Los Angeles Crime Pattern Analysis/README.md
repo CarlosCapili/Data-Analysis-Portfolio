@@ -56,21 +56,14 @@ The following shows the percentages of victims by race and the number of reporte
     - Male -> 51.7%
     - Female -> 48.3%
 
-According to [Data USA Los Angeles](https://datausa.io/profile/geo/los-angeles-ca?redirect=true), 47.2% of the people in Los Angeles are Hispanic/Latin people, 28.3% are White, 11.8% are Asian, and 8.2% are Black. Hispanic/Latin people account for approximately 40% of victims, followed by White at 25%, Black at 18%, and Asian at 5%. There are more victims in the Black community than the Asian community despite being only 8.2% of the population of LA. Hispanic/Latin and Black victims tend to be females, while White and Asian victims tend to be males.
-
+According to [Data USA Los Angeles](https://datausa.io/profile/geo/los-angeles-ca?redirect=true), 47.2% of the people in Los Angeles are Hispanic/Latin people, 28.3% are White, 11.8% are Asian, and 8.2% are Black as of 2023. Hispanic/Latin people account for approximately 40% of victims, followed by White at 25%, Black at 18%, and Asian at 5%. There are more victims in the Black community than the Asian community despite being only 8.2% of the population of LA. Hispanic/Latin and Black victims tend to be females, while White and Asian victims tend to be males.
 
 *The Unknown bar represents the race of the victim to which the crime has been reported is unknown*
 
 ![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/image-1.png)
 
-3. Victims By Sex:
- - Male - 50%
- - Female - 48%
- - Unknown - 1%
+In the Hispanic/Latin community, the ratio between male and female victims is almost 50/50. However, the majority of female Hispanic/Latin victims are below the age of 40. In the Black community,  
 
-*The Unknown sex represents the sex of the victim to which the crime has been reported is unknown*
-
- ![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/image-2.png)
 
  4. 5 Most Reported Crimes in LA:
  - Battery - Simple Assault - 10.28%
