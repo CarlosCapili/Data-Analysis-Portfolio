@@ -1,7 +1,7 @@
 # Los Angeles Crime Analysis
 
 ## Summary 
-This project explores Los Angeles crime trends using reported crime incidents provided by the Los Angeles Police Department on Data.gov. Python was used to perform exploratory data analysis with a primary focus on determining victim demographics, location, and type of crime, to aid in community support and inform the LAPD on where to focus their resources for crime prevention initiatives.
+This project explores Los Angeles crime trends using reported crime incidents from 2020 to 2025 provided by the Los Angeles Police Department on Data.gov. Python was used to perform exploratory data analysis with a primary focus on determining victim demographics, location, and type of crime, to aid in community support and inform the LAPD on where to focus their resources for crime prevention initiatives.
 
 Data Source - https://catalog.data.gov/dataset/crime-data-from-2020-to-present
 
@@ -35,7 +35,7 @@ The following shows the percentages of victims by age group and the number of re
     -  Male -> 54.7%
     -  Female -> 45.3%
 
-Individuals aged 26+ account for approximately 81% of victims, where 40% are adults (26-40), 30% are middle aged (41-60), and 11% are seniors (61+). Victims aged 26+ are more likely to be males, while victims who are 25 and under tend to be female.
+From 2020 to 2025, individuals aged 26+ account for approximately 81% of victims, where 40% are adults (26-40), 30% are middle aged (41-60), and 11% are seniors (61+). Victims aged 26+ are more likely to be males, while victims who are 25 and under tend to be female.
 
 ![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/image.png)
 
