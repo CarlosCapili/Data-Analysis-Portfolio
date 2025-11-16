@@ -13,28 +13,51 @@ The entire project was completed using Python in a Jupyter Notebook environment.
 
 ## Key Findings :
 
-Victim Demographics
+### Victim Demographics
 
-1. Victims By Age Group:
-  - Adult (26-40) - 40%
-  - Middle Aged (41-60) - 30%
-  - Young Adult (19-25) - 15%
-  - Senior (61+) - 11%
-  - Teen (15-18) - 2%
-  - Child (0-14) - 2%
+The following shows the percentages of victims by age group and the number of reported crimes followed by their respective sex percentage breakdown:
+  - Child (0-14) -> 1.9% -> 13.6k 
+    -  Male -> 42.0%
+    -  Female -> 58.0%
+  - Teen (15-18) -> 2.5% -> 17.6k
+    -  Male -> 42.8%
+    -  Female -> 57.2%
+  - Young Adult (19-25) - 14.6% -> 104.5k
+    -  Male -> 45.9%
+    -  Female -> 54.1%
+  - Adult (26-40) - 39.7% -> 284.6k
+    -  Male -> 50.1%
+    -  Female -> 49.9%
+  - Middle Aged (41-60) - 30.0% -> 215.5k
+    -  Male -> 54.5%
+    -  Female -> 45.5%
+  - Senior (61+) - 11.3% -> 81.2k
+    -  Male -> 54.7%
+    -  Female -> 45.3%
 
-Individuals between 26 to 60 years old are victims of the majority of crimes with approximately 500,000 reported crimes accounting for 70% of total crimes reported in LA.
+Individuals aged 26+ account for approximately 81% of victims, where 40% are adults (26-40), 30% are middle aged (41-60), and 11% are seniors (61+). Victims aged 26+ are more likely to be males, while victims who are 25 and under tend to be female.
 
 ![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/image.png)
 
-2. Victims By Race:
-  - Hispanic/Latin - 40%
-  - White - 25%
-  - Black - 18%
-  - Other - 9%
-  - Asian - 5%
+The following shows the percentages of victims by race and the number of reported crimes followed by their respective sex percentage breakdown:
+  - Hispanic/Latin -> 39.9% -> 285.9k
+    - Male -> 49.4%
+    - Female -> 50.6%
+  - White -> 25.2% -> 180.8k
+    - Male -> 54.9%
+    - Female -> 45.1%
+  - Black -> 18.4% -> 131.9k
+    - Male -> 43.6%
+    - Female -> 56.4%
+  - Other -> 8.8% -> 63.1k
+    - Male -> 58.4%
+    - Female -> 41.6%
+  - Asian -> 5.2% -> 37.2k
+    - Male -> 51.7%
+    - Female -> 48.3%
 
-Approximately 285,000 crimes reported have Hispanic/Latin as victims, 180,000 crimes reported have Whites as victims, 131,000 have Blacks as victims, and 37,000 have Asians as victims.
+According to [Data USA Los Angeles](https://datausa.io/profile/geo/los-angeles-ca?redirect=true), 47.2% of the people in Los Angeles are Hispanic/Latin people, 28.3% are White, 11.8% are Asian, and 8.2% are Black. Hispanic/Latin people account for approximately 40% of victims, followed by White at 25%, Black at 18%, and Asian at 5%. There are more victims in the Black community than the Asian community despite being only 8.2% of the population of LA. Hispanic/Latin and Black victims tend to be females, while White and Asian victims tend to be males.
+
 
 *The Unknown bar represents the race of the victim to which the crime has been reported is unknown*
 
