@@ -16,6 +16,7 @@ The entire project was completed using Python in a Jupyter Notebook environment.
 ### Victim Demographics
 
 Victims Grouped By Age Group:
+
 The following shows the percentages of victims by age group and the number of reported crimes followed by their respective sex percentage breakdown:
   - Child (0-14) -> 1.9% -> 13.6k 
     -  Male -> 42.0%
@@ -41,6 +42,7 @@ From 2020 to 2025, individuals in Los Angeles aged 26+ account for approximately
 ![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/image.png)
 
 Victims Grouped By Race:
+
 The following shows the percentages of victims by race and the number of reported crimes followed by their respective sex percentage breakdown:
   - Hispanic/Latin -> 39.9% -> 285.9k
     - Male -> 49.4%
@@ -60,9 +62,10 @@ The following shows the percentages of victims by race and the number of reporte
 
 According to [Data USA Los Angeles](https://datausa.io/profile/geo/los-angeles-ca?redirect=true), 47.2% of the people in Los Angeles are Hispanic/Latin people, 28.3% are White, 11.8% are Asian, and 8.2% are Black as of 2023. Hispanic/Latin people account for approximately 40% of victims, followed by White at 25%, Black at 18%, and Asian at 5%. There are more victims in the Black community than the Asian community despite being only 8.2% of the population of LA. Hispanic/Latin and Black victims tend to be females, while White and Asian victims tend to be males.
 
-*The Unknown bar represents the race of the victim to which the crime has been reported is unknown*
 
 ![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/image-1.png)
+
+[](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/Victim_Race_Sex.png)
 
 Victims Grouped By Age Group and Race:
 The following chart shows victims of each race grouped by age group and sex. In the Hispanic/Latin, victims are more likely to be females aged 40 and under with 95.9k reported incidents as opposed to 86.2k for males. Similarly, in the Black community, victims are also likely to be females especially young adults (19-25) with 11.2k reported incidents as opposed to 6.2k for males, and adults (26-40) with 31.9k reported incidents as opposed to 23.1k for males. In the White and Asian communities, males aged 26+ are more likely to be victims.
@@ -92,6 +95,7 @@ place male female common crime here
 ![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/image-3.png)
 
 Locations Where Incidents Occur:
+
 There is not one area of Los Angeles that exceeds 10% of total crime incidents. The area with the most incidents is Central, accounting for 7.03% of total incidents (50k incidents), whereas Hollenbeck accounting for 3.29% of total incidents (23.6k incidents). **The Central area has experienced more than twice the crime incidents than Hollenbeck, and is an area that Los Angeles Police Department should monitor closely and prepare officers to deploy quicker.** The following chart shows the crime incidents per area.
 
 Top 5 Locations With The Most Incidents:
