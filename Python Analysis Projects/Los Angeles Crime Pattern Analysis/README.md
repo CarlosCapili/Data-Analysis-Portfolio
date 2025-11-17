@@ -65,7 +65,7 @@ According to [Data USA Los Angeles](https://datausa.io/profile/geo/los-angeles-c
 
 ![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/image-1.png)
 
-[](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/Victim_Race_Sex.png)
+![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/Victim_Race_Sex.png)
 
 Victims Grouped By Age Group and Race:
 The following chart shows victims of each race grouped by age group and sex. In the Hispanic/Latin, victims are more likely to be females aged 40 and under with 95.9k reported incidents as opposed to 86.2k for males. Similarly, in the Black community, victims are also likely to be females especially young adults (19-25) with 11.2k reported incidents as opposed to 6.2k for males, and adults (26-40) with 31.9k reported incidents as opposed to 23.1k for males. In the White and Asian communities, males aged 26+ are more likely to be victims.
