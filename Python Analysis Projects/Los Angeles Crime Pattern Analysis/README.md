@@ -15,6 +15,7 @@ The entire project was completed using Python in a Jupyter Notebook environment.
 
 ### Victim Demographics
 
+Victims Grouped By Age Group:
 The following shows the percentages of victims by age group and the number of reported crimes followed by their respective sex percentage breakdown:
   - Child (0-14) -> 1.9% -> 13.6k 
     -  Male -> 42.0%
@@ -35,10 +36,11 @@ The following shows the percentages of victims by age group and the number of re
     -  Male -> 54.7%
     -  Female -> 45.3%
 
-From 2020 to 2025, individuals aged 26+ account for approximately 81% of victims, where 40% are adults (26-40), 30% are middle aged (41-60), and 11% are seniors (61+). Victims aged 26+ are more likely to be males, while victims who are 25 and under tend to be female.
+From 2020 to 2025, individuals in Los Angeles aged 26+ account for approximately 81% of victims, where 40% are adults (26-40), 30% are middle aged (41-60), and 11% are seniors (61+). Victims aged 26+ are more likely to be males, while victims who are 25 and under tend to be female.
 
 ![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/image.png)
 
+Victims Grouped By Race:
 The following shows the percentages of victims by race and the number of reported crimes followed by their respective sex percentage breakdown:
   - Hispanic/Latin -> 39.9% -> 285.9k
     - Male -> 49.4%
@@ -62,69 +64,56 @@ According to [Data USA Los Angeles](https://datausa.io/profile/geo/los-angeles-c
 
 ![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/image-1.png)
 
+Victims Grouped By Age Group and Race:
 The following chart shows victims of each race grouped by age group and sex. In the Hispanic/Latin, victims are more likely to be females aged 40 and under with 95.9k reported incidents as opposed to 86.2k for males. Similarly, in the Black community, victims are also likely to be females especially young adults (19-25) with 11.2k reported incidents as opposed to 6.2k for males, and adults (26-40) with 31.9k reported incidents as opposed to 23.1k for males. In the White and Asian communities, males aged 26+ are more likely to be victims.
+
+The following chart shows crime incidents by age groups between races. 
 
 place victim age group by race and sex here
 
+### Type of Crimes and Incident Locations 
 
- 4. 5 Most Reported Crimes in LA:
- - Battery - Simple Assault - 10.28%
- - Theft of Identity - 8.21%
- - Burglary From Vehicle - 8.17%
- - Assault With Deadly Weapon, Aggravated Assault - 7.16%
- - Intimate Partner - Simple Assault - 6.45%
+Incidents Grouped By Type of Crime:
+The most commonly reported crimes in Los Angeles is some form of assault, with 'Battery - Simple Assault' being the most common with over 70k incidents, accounting for 10.3% of total crime incidents. Another common crime is 'Assault With Deadly Weapon, Aggravated Assault' with over 50k incidents accounting for 7.2% of total crime incidents. **Police in Los Angeles should always be aware and prepared to handle more violet incidents like this as it is more common.** 
 
-The most reported crime in LA is Battery - Simple Assault with over 70,000 occurances while only accounting for 10.28% of total crime in LA.
+1. Battery - Simple Assault -> 73.7k incidents -> Accounts for 10.3% of all crime in LA
+2. Theft of Identity -> 58.9k -> 8.21%
+3. Burglary From Vehicle -> 58.6k -> 8.17%
+4. Assault With Deadly Weapon, Aggravated Assault -> 51.3k -> 7.2%
+5. Intimate Partner - Simple Assault -> 46.2k -> 6.4%
+
+place common crime in los angeles plot here
+
+Common Crimes Between Sexes:
+The type of crime incident can differ between males and females. For example, 71.8% of victims who exprerience aggravated assault with a deadly weapon are male, whereas 76.1% of victims who experience simple assault by an intimate partner are female. In Los Angeles, males are prone to more violent crimes than females. The following chart shows the most common crimes for each sex.
+
+place male female common crime here
 
 ![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/image-3.png)
 
-5. Crimes Reported By Area:
-- Central - 7.03%
-- Southwest - 6.43%
-- 77th Street - 6.34%
-- Pacific - 5.67%
-- Hollywood - 5.32%
+Locations Where Incidents Occur:
+There is not one area of Los Angeles that exceeds 10% of total crime incidents. The area with the most incidents is Central, accounting for 7.03% of total incidents (50k incidents), whereas Hollenbeck accounting for 3.29% of total incidents (23.6k incidents). **The Central area has experienced more than twice the crime incidents than Hollenbeck, and is an area that Los Angeles Police Department should monitor closely and prepare officers to deploy quicker.** The following chart shows the crime incidents per area.
+
+Top 5 Locations With The Most Incidents:
+1. Central - 7.03%
+2. Southwest - 6.43%
+3. 77th Street - 6.34%
+4. Pacific - 5.67%
+5. Hollywood - 5.32%
+
+Locations Where Common Crimes Occur:
+As expected, the locations with the most crime incidents will be where the most common crimes occur. For example, Central, 77th Street, and Southwest are all top locations where common crimes occur. However, there are some areas that are not expected. Aside from the expected areas like Central or 77th Street, Devonshire and West LA are areas where identity theft is a common crime. Vehicle burglaries are common in N Hollywood and West LA. Simple assaults by intimate partners also occur in areas like Olympic and Mission. Finally, aggravated assault with deadly weapons also occur in Newton and Southeast. **The top locations where aggravated assault with deadly weapons occur are 77th Street, Southeast, Central, Newton, and Southwest. Police officers responding to incidents at these locations should be aware of the possiblity of aggravated assault with deadly weapon.**
+
+place locations whre common crimes occur here
 
 ![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/image-4.png)
 
-6. Crimes Reported By Premise:
-- Single Family Dwelling - 22.00%
-- Street - 18.47%
-- Multi-Unit Dwelling (Apartment, Duplex, Etc) - 15.51%
-- Parking Lot - 6.37%
-- Sidewalk - 5.24%
 
-Homes are a likely place for crimes to occur with almost a quarter of the crimes reported taking place in a Single Family Dwelling with over 157,000 incidents. Over 111,000 crimes reported have occurred in a Mult-Unit Dwelling. Homes account for 37.51% of premises for which crimes have been reported.
 
-![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/image-5.png)
 
-7. Crimes Reported By Weapon Used:
-- Strong-Arm (Hands, Fist, Feet Or Bodily Force) - 23.06%
-- Unknown Weapon/Other Weapon - 4.31%
-- Verbal Threat - 3.09%
-- Hand Gun - 2.42%
-- Knife With Blade 6 Inches or Less - 0.89%
 
-*The Unknown bar indicates that it is unknown whether a weapon was used for the reported crime. It accounts for 58.24% of reported crimes.*
 
-![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/image-6.png)
 
-8. Crimes Reported By Status:
-- Investigation Continued - 76.75%
-- Adult Other - 13.63%
-- Adult Arrest - 9.07%
-- Juvenile Arrest - 0.34%
-- Juvenile Other - 0.21%
 
-![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/image-7.png)
-
-9. Time It Takes To Report A Crime:
-- Same Day - 51.20%
-- Within 24 Hours - 18.82%
-- 2-7 Days - 15.99%
-- 60+ Days - 4.05%
-- 29-60 Days - 2.59%
-
-![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/image-8.png)
 
 ## Challenges Faced
