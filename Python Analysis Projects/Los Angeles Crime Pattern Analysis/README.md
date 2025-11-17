@@ -89,6 +89,7 @@ The most commonly reported crimes in Los Angeles is some form of assault, with '
 ![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/CommonReportedCrimes.png)
 
 Common Crimes Between Sexes:
+
 The type of crime incident can differ between males and females. For example, 71.8% of victims who exprerience aggravated assault with a deadly weapon are male, whereas 76.1% of victims who experience simple assault by an intimate partner are female. In Los Angeles, males are prone to more violent crimes than females. The following chart shows the most common crimes for each sex.
 
 ![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/male_female_common_crimes.png)
@@ -97,14 +98,7 @@ Locations Where Incidents Occur:
 
 There is not one area of Los Angeles that exceeds 10% of total crime incidents. The area with the most incidents is Central, accounting for 7.03% of total incidents (50k incidents), whereas Hollenbeck accounting for 3.29% of total incidents (23.6k incidents). 
 
-**The Central area has experienced more than twice the crime incidents than Hollenbeck, and is an area that Los Angeles Police Department should monitor closely and prepare officers to deploy quicker.** The following chart shows the crime incidents per area.
-
-Top 5 Locations With The Most Incidents:
-1. Central - 7.03%
-2. Southwest - 6.43%
-3. 77th Street - 6.34%
-4. Pacific - 5.67%
-5. Hollywood - 5.32%
+**The Central area has experienced more than twice the crime incidents than Hollenbeck, and is an area that Los Angeles Police Department should monitor closely and prepare officers to deploy quicker. The same can be applied to the other locations.** 
 
 ![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/Python%20Analysis%20Projects/Los%20Angeles%20Crime%20Pattern%20Analysis/Plots/incidents_per_area.png)
 
