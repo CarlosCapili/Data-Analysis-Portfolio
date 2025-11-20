@@ -1,15 +1,16 @@
-# Electric Vehicle Washington State
-## Source Data
-https://catalog.data.gov/dataset/electric-vehicle-population-data
+# Electric Vehicle Monitoring in Washington State
+## Summary
+The usage of EVs continue to grow year by year as more car companies create their own EVs to stay relevant in the automobile industry. There is no doubt in the future that gas cars will become obsolete and everyone will drive an EV. This project monitors current EV registrations in Washington State using a dataset provided by the Washington State Department of Licensing through Data.gov. A Power BI dashboard was built to show the geographic distribution of EVs to provide a better understand EV adoption patterns.
 
-## Purpose
-To report electric vehicle population in Washington State. 
+Data Source - https://catalog.data.gov/dataset/electric-vehicle-population-data
 
 ## Tools
 - SQL (Postgres)
 - Power BI
 
-## Findings:
+Data preprocessing was performed using SQL(Postgres) and the dashboard was created using Power BI.
+
+## Key Findings:
 1. There are approximately 193,700 registered EV's in the state of Washington with the top 5 EV makes being:
      - Tesla - 85,000 EV's (43.92% of the EV's in the state)
      - Chevrolet - 14,500 (7.51%) 
