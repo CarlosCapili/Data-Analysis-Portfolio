@@ -1,6 +1,6 @@
 # Electric Vehicle Monitoring in Washington State
 ## Summary
-The usage of EVs continue to grow year by year as more car companies create their own EVs to stay relevant in the automobile industry. There is no doubt in the future that gas cars will become obsolete and everyone will drive an EV. This project monitors current EV registrations in Washington State using a dataset provided by the Washington State Department of Licensing through Data.gov. A Power BI dashboard was built to show the geographic distribution of EVs to provide a better understand EV adoption patterns.
+The usage of EVs continue to grow year by year as more car companies create their own EVs to stay relevant in the automobile industry. There is no doubt in the future that gas cars will become obsolete and everyone will drive an EV. This project uses a dataset containing current EV registration records in Washington State provided by the Washington State Department of Licensing through Data.gov. A Power BI dashboard was built to show the geographic distribution of EVs to provide a better understanding of EV adoption patterns.
 
 Data Source - https://catalog.data.gov/dataset/electric-vehicle-population-data
 
