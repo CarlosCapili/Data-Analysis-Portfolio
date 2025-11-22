@@ -11,7 +11,9 @@ Data Source - https://catalog.data.gov/dataset/electric-vehicle-population-data
 Data preprocessing was performed using SQL(Postgres) and the dashboard was created using Power BI.
 
 ## Key Findings:
-1. There are approximately 193,700 registered EV's in the state of Washington with the top 5 EV makes being:
+
+
+There are approximately 193.7k registered EV's in the state of Washington with the top 5 EV makes being:
      - Tesla - 85,000 EV's (43.92% of the EV's in the state)
      - Chevrolet - 14,500 (7.51%) 
      - Nissan - 14,300 (7.40%) 
