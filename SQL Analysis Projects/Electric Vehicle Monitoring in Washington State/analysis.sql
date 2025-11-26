@@ -1,70 +1,69 @@
--- How many EV's are registered in Washington State?
-SELECT 
-	COUNT(DISTINCT dol_vehicle_id) AS registered_evs
-FROM ev_pop;
+-- Geographic Distribution 
 
--- What are the most common EV makes?
-SELECT 
-	make,
-	COUNT(*) AS ev_count,
-	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM ev_pop), 2) AS make_pct
-FROM ev_pop
-GROUP BY make
-ORDER BY ev_count DESC;
+-- How many EV's are registered in the state?
+SELECT COUNT(*) FROM ev_pop;
 
--- How many EV's are registered in each county?
+-- Which counties have the highest EV registrations?
 SELECT
 	county,
 	COUNT(*) AS ev_count,
-	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM ev_pop), 2) AS ev_county_pct
+	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM ev_pop), 1) AS ev_pct
 FROM ev_pop
 GROUP BY county
 ORDER BY ev_count DESC;
 
--- How many EV's are registered in each city?
-SELECT
+-- Which cities have the highest EV registration?
+ SELECT
+ 	county,
 	city,
 	COUNT(*) AS ev_count,
-	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM ev_pop), 2) AS ev_county_pct
+	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM ev_pop), 1) AS ev_pct
 FROM ev_pop
-GROUP BY city
+GROUP BY county, city
 ORDER BY ev_count DESC;
 
--- What are the most popular makes in the top 5 cities with registered EV's?
--- Total EV count per city
-WITH total_city_count AS (
+-- Vehicle Makes & Model Trends
+
+-- What are the most common EV makes in the state?
+SELECT
+	make,
+	COUNT(*) AS make_count,
+	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM ev_pop), 1) AS make_pct
+FROM ev_pop
+GROUP BY make
+ORDER BY make_count DESC;
+
+-- What are the most common EV makes in each county?
+WITH total_ev_county AS (
 	SELECT
-		city,
-		COUNT(*) AS city_ev_count
+		county,
+		COUNT(*) AS ev_count
 	FROM ev_pop
-	GROUP BY city
+	GROUP BY county
 ),
--- Total EV count per city by make
-sub_city_count AS (
+make_per_county AS (
 	SELECT
-		city,
+		county,
 		make,
-		COUNT(*) AS make_ev_count
+		COUNT(*) AS ev_count
 	FROM ev_pop
-	GROUP BY city, make
+	GROUP BY county, make
+	ORDER BY ev_count DESC
 )
 
 SELECT
-	scc.city,
-	scc.make,
-	scc.make_ev_count,
-	ROUND(scc.make_ev_count * 100.0 / tcc.city_ev_count, 2) AS make_by_city_pct
-FROM sub_city_count AS scc
-JOIN total_city_count AS tcc
-	ON scc.city = tcc.city
-WHERE scc.city IN ('Seattle', 'Bellevue', 'Redmond', 'Vancouver', 'Bothell')
-ORDER BY tcc.city_ev_count DESC, make_by_city_pct DESC;
+	mec.county,
+	mec.make,
+	mec.ev_count,
+	tec.ev_count,
+	ROUND(mec.ev_count * 100.0 / tec.ev_count, 2) AS make_county_pct
+FROM make_per_county AS mec
+JOIN total_ev_county AS tec
+	ON mec.county = tec.county
+ORDER BY tec.ev_count DESC, make_county_pct DESC;
 
--- Count the amount of cities for each make where it is registered as the number 1 EV
-SELECT
-	make,
-	COUNT(*) AS cities_registered
-FROM (
+-- For each make, how many cities does it rank as the most registered EV
+WITH city_makes_ranked AS (
 	SELECT
 		city,
 		make,
@@ -72,27 +71,43 @@ FROM (
 		DENSE_RANK() OVER(PARTITION BY city ORDER BY COUNT(*) DESC) AS dr
 	FROM ev_pop
 	GROUP BY city, make
-) AS makes_per_city
-WHERE dr = 1
-GROUP BY make
-ORDER BY cities_registered DESC
+)
 
--- What is the EV type for registered EV's?
-SELECT
-	ev_type,
-	COUNT(*) ev_type_count,
-	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM ev_pop), 0) AS ev_type_pct
-FROM ev_pop
-GROUP BY ev_type;
-
--- What are some common EV's in the state?
 SELECT
 	make,
-	model,
-	COUNT(*) as ev_count,
-	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM ev_pop), 2) AS ev_type_pct
+	COUNT(*) AS city_count
+FROM city_makes_ranked
+WHERE dr = 1
+GROUP BY make
+ORDER BY city_count DESC;
+
+-- EV Type Breakdown
+SELECT
+	ev_type,
+	COUNT(*) AS ev_count,
+	ROUND(COUNT(*) * 100.0 / (SELECT COUNT(*) FROM ev_pop), 1) AS ev_pct
 FROM ev_pop
-GROUP BY make, model
-ORDER BY ev_count DESC;
+GROUP BY ev_type
+
+-- Time Based Adoption Trends 
+
+-- When did EV's become popular (Show EV's by model year)
+SELECT
+	model_year,
+	COUNT(*) AS ev_count
+FROM ev_pop
+GROUP BY model_year
+ORDER BY model_year DESC;
+
+-- When did each make begin to appear?
+SELECT
+	model_year,
+	make,
+	model,
+	COUNT(*) AS ev_count
+FROM ev_pop
+GROUP BY model_year, make, model
+ORDER BY make, model_year
+
 
 
