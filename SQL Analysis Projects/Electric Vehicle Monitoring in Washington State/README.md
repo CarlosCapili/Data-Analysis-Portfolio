@@ -12,72 +12,77 @@ Data preprocessing was performed using SQL(Postgres) and the dashboard was creat
 
 ## Key Findings:
 
-There are approximately 193.8k registered EVs in Washington State.
+There are approximately 193.8k registered EV's in Washington State.
 
-The top 5 counties with the most registered EVs are:
-     - King - 100,000 EV's (51.6% of registered EVs in the state)
-     - Snohomish - 23,000 (11.9%)
-     - Pierce - 15,300 (7.9%)
-     - Clark - 11,500 (5.9%)
-     - Thurston - 7000 (3.7%) 
-
-There are approximately 193.7k registered EV's in the state of Washington with the top 5 EV makes being:
-     - Tesla - 85,000 EV's (43.92% of the EV's in the state)
-     - Chevrolet - 14,500 (7.51%) 
-     - Nissan - 14,300 (7.40%) 
-     - Ford - 10,200 (5.28%)
-     - Kia - 8400 (4.38%)
+1. Some of the most common EV makes are:
+     - Tesla - 85,000 EV's (43.9% of the EV's in the state)
+     - Chevrolet - 14,500 (7.5%) 
+     - Nissan - 14,300 (7.4%) 
+     - Ford - 10,200 (5.3%)
+     - Kia - 8400 (4.4%)
 
 Some other makes outside the top 5 are BMW, Toyota, Volkswagen, Jeep, and Hyundai.
 
+2.. The top 5 counties with the most registered EV's are:
+     - King - 100,000 EV's (51.6% of registered EV's in the state)
+          - Popular makes: Tesla, Nissan, and Chevrolet 
+     - Snohomish - 23,000 (11.9%)
+          - Popular makes: Tesla, Nissan, and Chevrolet
+     - Pierce - 15,300 (7.9%)
+          - Popular makes: Tesla, Chevrolet, and Ford   
+     - Clark - 11,500 (5.9%)
+          - Popular makes: Tesla, Chevrolet, and Toyota  
+     - Thurston - 7000 (3.7%)
+          - Popular makes: Tesla, Chevrolet, and Ford
+  
+3. The top 5 cities with the most registered EV's and top 3 makes are:
+     - Seattle - 31,700 EV's (16.4% of EV's in the state)
+          - Tesla - 12,200 EV's (38.6% of Seattle EV's are Tesla)
+          - Nissan - 2,791 (8.8%)
+          - Chevrolet - 2,481 (7.8%) 
 
+     - Bellevue - 9,600 (5.0%)
+          - Tesla - 5,841 (60.3%)
+          - BMW - 540 (5.6%)
+          - Nissan - 539 (5.6%)
 
-3. Top 5 cities with the most registered EV's and top 3 makes are:
-     - Seattle - 31,700 EV's (16.41% of EV's in the state)
-          - Tesla - 12,200 EV's (38.63% of Seattle EV's are Tesla)
-          - Nissan - 2,791 (8.78%)
-          - Chevrolet - 2,481 (7.80%) 
+     - Redmond - 6,900 (3.6%)
+          - Tesla - 4,159 (59.9%)
+          - Nissan - 473 (6.8%)
+          - BMW - 323 (4.7%)
 
-     - Bellevue - 9,600 (5.00%)
-          - Tesla - 5,841 (60.30%)
-          - BMW - 540 (5.58%)
-          - Nissan - 539 (5.56%)
+     - Vancouver - 6,800 (3.5%)
+          - Tesla - 2,679 (39.0%)
+          - Chevrolet - 588 (8.6%)
+          - Nissan - 560 (8.2%)
 
-     - Redmond - 6,900 (3.58%)
-          - Tesla - 4,159 (59.87%)
-          - Nissan - 473 (6.81%)
-          - BMW - 323 (4.65%)
-
-     - Vancouver - 6,800 (3.54%)
-          - Tesla - 2,679 (39.04%)
-          - Chevrolet - 588 (8.57%)
-          - Nissan - 560 (8.16%)
-
-     - Bothell - 6,300 (3.30%)
-          - Tesla - 3,795 (59.37%)
-          - Nissan - 398 (6.23%)
-          - BMW - 267 (4.18%)
+     - Bothell - 6,300 (3.3%)
+          - Tesla - 3,795 (59.4%)
+          - Nissan - 398 (6.2%)
+          - BMW - 267 (4.2%)
 
 4. There are 483 cities in Washington State. The top 5 EV makes where it is the most registered in the city are:
      - Tesla - 382 cities (79% of cities in Washington state have Tesla as the most registered EV)
      - Chevrolet- 61 
      - Ford - 35 
      - Nissan - 24 
-     - Toyota - 20 
+     - Toyota - 20
+  
+There is no surprise that Tesla is the most registered make for an EV. Other makes such as Chevrolet, Ford, Nissan, and Toyota  seem to be the more popular alternatives to a Tesla.
 
-5. Approximately 151,000 or 78% of all registered EV's are Battery Electric Vehicle (BEV) while 41,900 or 21.63% are Plug-in Hybrid Electric Vehicle (PHEV)
+5. Approximately 151,000 or 78.4% of all registered EV's are Battery Electric Vehicle (BEV) while 41,900 or 21.6% are Plug-in Hybrid Electric Vehicle (PHEV)
 
 Most Common EV Models:
-1. Tesla Model Y (20.68% of registered EV's in the state)
-2. Tesla Model 3 (15.92%)
-3. Nissan Leaf (6.96)
-4. Tesla Model S (4.03)
-5. Chevrolet Bolt EV (3.37)
-6. Tesla Model X (3.15)
-7. Chevrolet Volt (2.49)
-8. Volkswagen ID 4 (2.27)
-9. Ford Mustang Mach-E (1.99)
-10. Jeep Wrangler (1.98)
+1. Tesla Model Y (20.7% of registered EV's in the state)
+2. Tesla Model 3 (15.9%)
+3. Nissan Leaf (7.0)
+4. Tesla Model S (4.0)
+5. Chevrolet Bolt EV (3.4)
+6. Tesla Model X (3.2)
+7. Chevrolet Volt (2.5)
+8. Volkswagen ID 4 (2.3)
+9. Ford Mustang Mach-E (2.0)
+10. Jeep Wrangler (2.0)
 
 ## Dashboard
 ![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/SQL%20Analysis%20Projects/Electric%20Vehicle%20Monitoring%20in%20Washington%20State/Power%20BI%20Screenshots/image-2.png)
