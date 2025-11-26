@@ -85,6 +85,6 @@ Most Common EV Models:
 10. Jeep Wrangler (2.0)
 
 ## Dashboard
-![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/SQL%20Analysis%20Projects/Electric%20Vehicle%20Monitoring%20in%20Washington%20State/Power%20BI%20Screenshots/image-2.png)
-![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/SQL%20Analysis%20Projects/Electric%20Vehicle%20Monitoring%20in%20Washington%20State/Power%20BI%20Screenshots/image-3.png)
-![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/SQL%20Analysis%20Projects/Electric%20Vehicle%20Monitoring%20in%20Washington%20State/Power%20BI%20Screenshots/image-4.png)
+![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/SQL%20Analysis%20Projects/Electric%20Vehicle%20Monitoring%20in%20Washington%20State/Power%20BI%20Screenshots/Overview.png)
+![alt text](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/SQL%20Analysis%20Projects/Electric%20Vehicle%20Monitoring%20in%20Washington%20State/Power%20BI%20Screenshots/Geographic_Distribution.png)
+
