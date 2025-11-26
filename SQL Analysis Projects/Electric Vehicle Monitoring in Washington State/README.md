@@ -23,7 +23,7 @@ There are approximately 193.8k registered EV's in Washington State.
 
 Some other makes outside the top 5 are BMW, Toyota, Volkswagen, Jeep, and Hyundai.
 
-2.. The top 5 counties with the most registered EV's are:
+2. The top 5 counties with the most registered EV's are:
      - King - 100,000 EV's (51.6% of registered EV's in the state)
           - Popular makes: Tesla, Nissan, and Chevrolet 
      - Snohomish - 23,000 (11.9%)
