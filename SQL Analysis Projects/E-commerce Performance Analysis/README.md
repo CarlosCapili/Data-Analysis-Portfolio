@@ -12,7 +12,9 @@ Data Source - https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 - VS Code
 
 ## Key Findings:
-
+- Total revenue is approx. $13.55 and the top 3 states that contribute the most revenue are: SP - 38.31% ($5191829.48), RJ - 13.39% ($1815534.97), MG - 11.66% ($1580228.93)
+- Beleza Saude has 9669 orders with $1258591.44 revenue accounting for 9.29% of total revenue
+- 
 
 ## Dashboard
-
+![Power BI Dashboard](https://github.com/CarlosCapili/Data-Analysis-Portfolio/blob/main/SQL%20Analysis%20Projects/E-commerce%20Performance%20Analysis/dashboard/powerbi_dashboard_screenshot.png)
