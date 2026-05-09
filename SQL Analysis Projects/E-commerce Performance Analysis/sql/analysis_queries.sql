@@ -87,13 +87,24 @@ LIMIT 10;
 -- TIME ANALYSIS
 -- ===========================================================
 
--- Orders Per Month
+-- Revenue & Orders Per Month
 SELECT 
-	DATE_TRUNC('month', order_purchase_timestamp) AS month,
-	COUNT(*) AS orders
-FROM orders
+	DATE_TRUNC('month', o.order_purchase_timestamp)::date AS month,
+	SUM(oi.price::numeric) AS monthly_revenue,
+	COUNT(*) AS orders,
+	-- Month Over Month ((Curr. Revenue/Prev. Revenue) - 1)
+	ROUND(((SUM(oi.price::numeric) / 
+		LAG(SUM(oi.price::numeric)) OVER(ORDER BY DATE_TRUNC('month', o.order_purchase_timestamp)::date)) - 1
+	)*100.0, 2) AS month_over_month
+FROM orders AS o
+JOIN order_items AS oi
+	ON o.order_id = oi.order_id
+WHERE o.order_purchase_timestamp BETWEEN '2017-01-01' AND '2018-08-01'
 GROUP BY month
 ORDER BY month;
+
+
+
 
 
 
